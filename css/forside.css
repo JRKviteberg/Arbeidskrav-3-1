@@ -26,3 +26,13 @@
   flex-direction: row;
   gap: 100px;
 }
+
+.cafecard {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+}
+.cafecard p {
+  max-width: 600px;
+  padding: 50px;
+}
