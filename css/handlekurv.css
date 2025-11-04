@@ -1,0 +1,247 @@
+
+:root {
+  --main-green: #144d2a;
+  --accent-bg: #fdf7ed;
+  --text-dark: #1e1e1e;
+  --gray: #ccc;
+  --focus-outline: 3px solid #144d2a;
+  --transition: all 0.2s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Arial", sans-serif;
+  background-color: #fffefc;
+  color: var(--text-dark);
+  margin: 0;
+  padding: 20px;
+  padding-bottom: 100px;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
+h1, h2, h3 {
+  line-height: 2;
+}
+
+/* ======== PRODUKTLISTE ======== */
+.order-list {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid var(--gray);
+  padding: 15px 0;
+  gap: 1.5rem;
+}
+
+.order-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-name {
+  font-size: 1rem;
+  margin: 0 0 5px 0;
+}
+
+.counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter button {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.counter button:hover,
+.counter button:focus {
+  background-color: #cfcfcf;
+  outline: var(--focus-outline);
+}
+
+.counter .count {
+  min-width: 24px;
+  text-align: center;
+}
+
+/* ======== TOTAL & HANDLINGER ======== */
+.summary {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.total-section h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+#order-btn {
+  background-color: var(--main-green);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#order-btn:hover,
+#order-btn:focus {
+  background-color: #0f3e21;
+  outline: var(--focus-outline);
+}
+
+.extra-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.extra-buttons button {
+  flex: 1;
+  min-width: 120px;
+  background-color: #e5e5e5;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.extra-buttons button:hover,
+.extra-buttons button:focus {
+  background-color: #d5d5d5;
+  outline: var(--focus-outline);
+}
+
+#table-number {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* ======== KONTAKTSKJEMA ======== */
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: var(--accent-bg);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.contact-form p {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+input, textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+  outline: var(--focus-outline);
+}
+
+#send-btn {
+  background-color: var(--main-green);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#send-btn:hover,
+#send-btn:focus {
+  background-color: #0f3e21;
+  outline: var(--focus-outline);
+}
+
+#confirmation {
+  color: var(--main-green);
+  font-weight: 600;
+  text-align: center;
+  margin-top: 15px;
+}
+
+
+
+
+/* ======== RESPONSIV ======== */
+@media (max-width: 768px) {
+  .order-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .total-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #order-btn {
+    width: 40%;
+    text-align: center;
+  }
+
+  .extra-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .extra-buttons button {
+    width: 50%;
+    
+  }
+
+  
+}
