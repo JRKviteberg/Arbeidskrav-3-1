@@ -22,9 +22,7 @@
   padding: 50px;
 }
 
-.mothlypics {
-  display: flex;
-  flex-direction: row;
+.monthlypics img {
 }
 
 .cafecard {
@@ -41,4 +39,22 @@
 .cafecard p {
   max-width: 600px;
   padding: 75px;
+}
+
+#openinghours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+#openinghours h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+#openinghours p {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
 }
