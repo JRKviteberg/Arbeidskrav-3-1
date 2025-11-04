@@ -1,0 +1,15 @@
+:root {
+--maintext: #000;
+--bg: #FFFAEF;
+--bg-dark: #FFE4A7;
+--maincolor: #580404;
+--maincolor-hov: #BD8B8B;
+--scndbtn: #8B5F40;
+--scnbtn-hov: #E5B999;
+--third-btn: #00694B;
+--third-btn-hov: #26AA85;
+}
+
+header {
+    background-color: var(--maincolor);
+}
