@@ -1,15 +1,29 @@
 :root {
---maintext: #000;
---bg: #FFFAEF;
---bg-dark: #FFE4A7;
---maincolor: #580404;
---maincolor-hov: #BD8B8B;
---scndbtn: #8B5F40;
---scnbtn-hov: #E5B999;
---third-btn: #00694B;
---third-btn-hov: #26AA85;
+  --maintext: #000;
+  --bg: #fffaef;
+  --bg-dark: #ffe4a7;
+  --maincolor: #580404;
+  --maincolor-hov: #bd8b8b;
+  --scndbtn: #8b5f40;
+  --scnbtn-hov: #e5b999;
+  --third-btn: #00694b;
+  --third-btn-hov: #26aa85;
+}
+
+body {
+  background-color: var(--bg);
 }
 
 header {
-    background-color: var(--maincolor);
+  background-color: var(--maincolor);
+}
+
+h1 {
+  color: var(--maintext);
+  font-size: 45px;
+}
+
+h2 {
+  color: var(--maintext);
+  font-size: 30px;
 }
