@@ -21,15 +21,19 @@
   <body>
     <header class="headerMain">
       <div class="logoImg">
-        <img src="./assets/logokaffensarv.png" alt="bilde av logo" />
+        <img
+          id="kaffelogo"
+          src="./assets/logokaffensarv.png"
+          alt="bilde av logo"
+        />
       </div>
       <div class="headerButtons">
         <ul>
-          <li>Forside</li>
-          <li>Meny</li>
-          <li>Om oss</li>
+          <li aria-current="page"><a href="./index.html"></a>Forside</li>
+          <li><a href="./Meny.html"></a>Meny</li>
+          <li><a href="./"></a>Om oss</li>
           <li>Bærekraft</li>
-          <li>Handlekurv</li>
+          <li><a href="./BestillingsSide.html"></a>Handlekurv</li>
         </ul>
       </div>
     </header>
@@ -43,6 +47,7 @@
         />
       </div>
     </heading>
+    <button id="toggleBtn" class="off">Mørk modus</button>
     <h1 id="mainpic">Velkommen til Kaffens arv!</h1>
     <section id="monthlyspecial">
       <div class="monthlytext">
@@ -106,12 +111,17 @@
           width="600"
         />
       </article>
-      <h3>Åpningstider</h3>
-      <p>
-        Mandag-Fredag: 08:00 - 18:00 Lørdag: 09:00 - 16:00 Søndag: 12:00 - 16:00
-      </p>
+      <div id="openinghours">
+        <h3>Åpningstider</h3>
+        <br />
+        <p>
+          Mandag-Fredag: 08:00 - 18:00 <br />Lørdag: 09:00 - 16:00 <br />Søndag:
+          12:00 - 16:00
+        </p>
+      </div>
     </section>
 
+    <button id="resetBtn" style="display: none">Start på nytt</button>
     <footer>
       <p class="left">
         Kontakt oss<br />
@@ -134,6 +144,6 @@
         </a>
       </nav>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="/JS/index.js"></script>
   </body>
 </html>
