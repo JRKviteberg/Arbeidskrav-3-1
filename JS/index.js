@@ -1,22 +1,17 @@
-let shiftTimer;
-let co2 = 0;
+const btn = document.getElementById("toggleBtn");
 
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Shift") {
-    shiftTimer = setTimeout(() => {
-      document.getElementById("co2-meter").style.display = "block";
-    }, 3000);
+btn.addEventListener("click", () => {
+  // Toggle knappens stil
+  btn.classList.toggle("on");
+  btn.classList.toggle("off");
+
+  // Toggle dark mode på body
+  document.body.classList.toggle("dark");
+
+  // Oppdatert knappetekst
+  if (document.body.classList.contains("dark")) {
+    btn.textContent = "Light mode";
+  } else {
+    btn.textContent = "Dark mode";
   }
-});
-
-document.addEventListener("keyup", (e) => {
-  if (e.key === "Shift") {
-    clearTimeout(shiftTimer);
-  }
-});
-
-document.addEventListener("scroll", () => {
-  co2++;
-  const text = document.getElementById("co2-text");
-  if (text) text.textContent = `CO₂: ${co2} kaffegram`;
 });

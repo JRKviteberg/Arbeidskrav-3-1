@@ -29,11 +29,11 @@
       </div>
       <div class="headerButtons">
         <ul>
-          <li>Forside</li>
-          <li>Meny</li>
-          <li>Om oss</li>
+          <li aria-current="page"><a href="./index.html"></a>Forside</li>
+          <li><a href="./Meny.html"></a>Meny</li>
+          <li><a href="./"></a>Om oss</li>
           <li>Bærekraft</li>
-          <li>Handlekurv</li>
+          <li><a href="./BestillingsSide.html"></a>Handlekurv</li>
         </ul>
       </div>
     </header>
@@ -47,6 +47,7 @@
         />
       </div>
     </heading>
+    <button id="toggleBtn" class="off">Mørk modus</button>
     <h1 id="mainpic">Velkommen til Kaffens arv!</h1>
     <section id="monthlyspecial">
       <div class="monthlytext">
@@ -119,10 +120,8 @@
         </p>
       </div>
     </section>
-    <div id="co2-meter" style="display: none">
-      <div id="co2-cloud">☁️</div>
-      <p id="co2-text">CO₂: 0 kaffegram</p>
-    </div>
+
+    <button id="resetBtn" style="display: none">Start på nytt</button>
     <footer>
       <p class="left">
         Kontakt oss<br />

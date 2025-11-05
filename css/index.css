@@ -46,6 +46,7 @@
 
 .cafecard img {
   border-radius: 5px;
+  padding: 2px;
 }
 .cafecard p {
   max-width: 600px;
@@ -70,17 +71,27 @@
   padding: 10px;
 }
 
-#co2-meter {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background: white;
-  padding: 10px 14px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  font-size: 14px;
+#toggleBtn {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-#co2-cloud {
-  font-size: 28px;
-  text-align: center;
+
+#toggleBtn.off {
+  background-color: #ccc;
+  color: #333;
+}
+
+#toggleBtn.on {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Dark mode */
+.dark-mode {
+  --bg-dark: #0b0d10;
+  --text-dark: #e6e6e6;
 }
