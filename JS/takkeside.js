@@ -1,8 +1,8 @@
 const teamMembers = [
-    {name: "Jan-Roger", email: "janroger@kaffensarv.no", Image: "assets/takkeside/barista-mann.png"},
-    {name: "Silje", email: "silje@kaffensarv.no"},
-    {name: "Shaima", email: "shaima@kaffensarv.no"},
-    {name: "Jostein", email: "jostein@kaffensarv.no"}
+    {name: "Jan-Roger", email: "janroger@kaffensarv.no", image: "assets/takkeside/barista-mann.png"},
+    {name: "Silje", email: "silje@kaffensarv.no", image: "assets/takkeside/barista-dame.png"},
+    {name: "Shaima", email: "shaima@kaffensarv.no", image: "assets/takkeside/barista-dame.png"},
+    {name: "Jostein", email: "jostein@kaffensarv.no", image: "assets/takkeside/barista-mann.png"}
 ];
 
 const container = document.getElementById("team-container");
@@ -14,6 +14,7 @@ for (let i = 0; i < teamMembers.length; i++) {
     card.classList.add ("team-card");
 
     card.innerHTML = `
+    <img src="${member.image}" alt="Bilde av ${member.name}" class="team-photo">
     <h3>${member.name}</h3>
     <p>${member.email}</p>
     <button onclick="openContactForm('${member.name}')">Kontakt meg</button>
