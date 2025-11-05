@@ -48,6 +48,21 @@
   .cafecard2 {
     display: none;
   }
+
+  footer {
+    padding: 15px 20 px;
+  }
+
+  footer p.left footer p.center,
+  footer nav.right {
+    flex: 1 1 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  footer nav.right {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -91,5 +106,22 @@
     width: 100%;
     padding: 10px;
     font-size: 16px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+    gap: 10px;
+  }
+
+  footer nav.right a img.icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  footer p.left,
+  footer p.center {
+    font-size: 14px;
   }
 }
