@@ -1,21 +1,84 @@
-.thankyou-container 
+.thankyou-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+  padding: 48px 16px;
+}
 
-.thankyou-message h1 
 
-.thankyou-message p 
 
-.team-section 
+.thankyou-message p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-.team-section h2 
+.team-section {
+  width: 100%;
+  max-width: 900px;
+}
 
-.team-container 
+.team-section h2 {
+  margin-bottom: 16px;
+}
 
-.team-card 
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  justify-items: center;
+}
 
-.team-card h3 
+.team-card {
+  background-color: var(--bg);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
-.team-card p 
+.team-photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
 
-.team-card button 
+.team-card h3 {
+  margin-bottom: 8px;
+  color: var(--maintext);
+  font-size: 20px;
+}
 
-.team-card button:hover 
+.team-card p {
+  color: var(--maintext);
+  font-size: 14px;
+}
+
+.team-card button {
+  margin-top: 16px;
+  padding: 8px 16px;
+  background-color: var(--scndbtn);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.team-card button:hover {
+  background-color: var(--scnbtn-hov);
+}
+
+
+@media (max-width: 700px) {
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+}
