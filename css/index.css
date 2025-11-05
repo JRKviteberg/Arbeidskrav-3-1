@@ -75,23 +75,33 @@
   padding: 12px 20px;
   font-size: 16px;
   border: none;
-  border-radius: 6px;
+  border-radius: 0 0 6px 0;
   cursor: pointer;
   transition: 0.3s;
 }
 
 #toggleBtn.off {
-  background-color: #ccc;
-  color: #333;
+  background-color: var(--maincolor);
+  color: #f3f3f3;
+  border-top: #f3f3f3 2px solid;
 }
 
 #toggleBtn.on {
-  background-color: #4caf50;
+  background-color: var(--maincolor-hov);
   color: white;
+  border-top: #000 2px solid;
+}
 }
 
-/* Dark mode */
 .dark-mode {
-  --bg-dark: #0b0d10;
-  --text-dark: #e6e6e6;
+  background-color: #000;
+  color: #e6e6e6;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode li {
+  color: #e6e6e6;
 }

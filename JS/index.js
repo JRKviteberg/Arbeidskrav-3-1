@@ -1,17 +1,15 @@
-const btn = document.getElementById("toggleBtn");
+const toggleBtn = document.getElementById("toggleBtn");
 
-btn.addEventListener("click", () => {
-  // Toggle knappens stil
-  btn.classList.toggle("on");
-  btn.classList.toggle("off");
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
 
-  // Toggle dark mode på body
-  document.body.classList.toggle("dark");
-
-  // Oppdatert knappetekst
-  if (document.body.classList.contains("dark")) {
-    btn.textContent = "Light mode";
+  if (document.body.classList.contains("dark-mode")) {
+    toggleBtn.textContent = "Lys modus";
+    toggleBtn.classList.remove("off");
+    toggleBtn.classList.add("on");
   } else {
-    btn.textContent = "Dark mode";
+    toggleBtn.textContent = "Mørk modus";
+    toggleBtn.classList.remove("on");
+    toggleBtn.classList.add("off");
   }
 });
