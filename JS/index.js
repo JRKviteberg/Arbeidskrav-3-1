@@ -12,4 +12,6 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.classList.remove("on");
     toggleBtn.classList.add("off");
   }
+
+  console.log("Dark mode toggled");
 });
