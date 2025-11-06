@@ -7,8 +7,8 @@
       name="description"
       content="Kaffens arv - en kafé som feirer kaffekultur og bærekraft"
     />
-    <meta name="Jan-Roger, Silje, Shaima, Jostein" content="Kaffens arv team" />
-    <title>Forside</title>
+    <meta name="author" content="Gruppe 1" />
+    <title>Kaffens arv</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,53 +21,60 @@
   <body>
     <header class="headerMain">
       <div class="logoImg">
-        <img src="./assets/logokaffensarv.png" alt="bilde av logo" />
+        <img
+          id="kaffelogo"
+          src="./assets/images/logokaffensarv.png"
+          alt="bilde av logo"
+        />
       </div>
-      <div class="headerButtons">
+      <nav class="headerButtons">
         <ul>
-          <li>Forside</li>
-          <li>Meny</li>
-          <li>Om oss</li>
-          <li>Bærekraft</li>
-          <li>Handlekurv</li>
+          <li aria-current="page"><a href="./index.html"></a>Forside</li>
+          <li><a href="./Meny.html">Meny</a></li>
+          <li><a href="#">Om oss</a></li>
+          <li><a href="#">Bærekraft</a></li>
+          <li><a href="./BestillingsSide.html">Handlekurv</a></li>
         </ul>
-      </div>
+      </nav>
     </header>
     <heading>
       <div class="heroImage">
         <img
-          src="./assets/forside/herosection (1).png"
-          width="1200"
+          src="./assets/images/hero.png"
+          width="800"
           height="auto"
           alt="Bilde av kaffekopp og bolle"
         />
       </div>
+      <button id="toggleBtn" class="off">Mørk modus</button>
     </heading>
+
     <h1 id="mainpic">Velkommen til Kaffens arv!</h1>
     <section id="monthlyspecial">
       <div class="monthlytext">
         <h2>Sjekk ut månedens bundle!</h2>
         <br />
-        <p>
+        <p aria-label="Månedens kaffetilbud">
           Ekstra gode drikker til ekstra gode tilbud! <br />
           Ta med egen kopp og få rabatt på toppen! #gjenbruk
         </p>
       </div>
+
       <div class="monthlypics">
         <img
-          src="/assets/varm drikke/bunbundle.png"
+          src="/assets/images/bunbundle.png"
           alt="En kopp med en kaffe latte og en bolle i bakgrunnen"
           height="330"
           width="auto"
         />
         <img
-          src="/assets/varm drikke/pumpinicedbunble.png"
+          src="/assets/images/pumpinicedbunble.png"
           alt="Bilde av en islatte pumpkin spice og en kopp med pumpkin spice latte"
           height="330"
           width="auto"
         />
         <img
-          src="/assets/varm drikke/pumpinspicelattebundle.png"
+          src="/assets/images/pumpinspicelattebundle.png"
           alt="Bilde av en varm pumpkin spice latte og en bolle i bakgrunnen"
           height="330"
           width="auto"
@@ -76,42 +83,72 @@
     </section>
 
     <section>
-      <article class="">
+      <img
+        id="coffeeimg"
+        src="/assets/images/espresso.png"
+        alt="Kaffebønner og kaffe som blir helt i kaffekopp på på bord"
+        width="1520"
+      />
+    </section>
+    <section aria-label="Introduksjon">
+      <article class="cafecard">
         <img
-          src="./assets/forside/sittingarea.png"
+          src="./assets/images/sittingarea.png"
           alt="Bilde av kaffens arv kafe med stoler og bord pent plassert i midten"
+          width="600"
         />
-        Hos oss handler kaffe om mer enn smak. Det handler om mennesker,
-        historier og bærekraft. Vi henter våre bønner direkte fra små,
-        familieeide gårder, rister dem lokalt og serverer dem med stolthet.
+        <p>
+          Hos oss handler kaffe om mer enn smak. Det handler om mennesker,
+          historier og bærekraft. Vi henter våre bønner direkte fra små,
+          familieeide gårder, rister dem lokalt og serverer dem med stolthet.
+        </p>
       </article>
-      <article>
-        <img
-          src="/assets/desktopforside/table-chair.png"
-          alt="Sitteareal med grønne planter på vegg og trestoler og bord"
-          height="200"
-          width="auto"
-        />
-        Her kan du senke skuldrene, kjenne på roen og nyte en kopp kaffe med god
-        samvittighet. Kaffens Arv er din moderne oase. En møteplass der
-        kvalitet, fellesskap og omtanke står i sentrum.
-      </article>
-      <h3>Åpningstider</h3>
-      <p>
-        Mandag-Fredag: 08:00 - 18:00 Lørdag: 09:00 - 16:00 Søndag: 12:00 - 16:00
-      </p>
+      <div class="cafecard2">
+        <article class="cafecard">
+          <p>
+            Her kan du senke skuldrene, kjenne på roen og nyte en kopp kaffe med
+            god samvittighet. Kaffens Arv er din moderne oase. En møteplass der
+            kvalitet, fellesskap og omtanke står i sentrum.
+          </p>
+          <img
+            src="/assets/images/table-chair.png"
+            alt="Sitteareal med grønne planter på vegg og trestoler og bord"
+            width="600"
+          />
+        </article>
+      </div>
+      <div id="openinghours">
+        <h3>Åpningstider</h3>
+        <br />
+        <p>
+          Mandag-Fredag: 08:00 - 18:00 <br />Lørdag: 09:00 - 16:00 <br />Søndag:
+          12:00 - 16:00
+        </p>
+      </div>
     </section>
 
     <footer>
-      <p>
+      <p class="left">
         Kontakt oss<br />
         Storgata 12<br />
         0161 Oslo<br />
         Tlf: 22334455
       </p>
 
-      <p>© 2025 Kaffens arv</p>
+      <p class="center">© 2025 Kaffens arv</p>
+
+      <nav class="right" aria-label="Linker til sosiale medier">
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="assets/icons/facebook.png" alt="Facebook" class="icon" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="assets/icons/instagram.png" alt="Instagram" class="icon" />
+        </a>
+        <a href="mailto:post@kaffensarv.no">
+          <img src="assets/icons/mail.png" alt="E-post" class="icon" />
+        </a>
+      </nav>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="/JS/index.js"></script>
   </body>
 </html>

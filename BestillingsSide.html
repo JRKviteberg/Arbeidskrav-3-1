@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Arbeidskrav-3" />
-    <meta name="Jan-Roger, Silje, Shaima, Jostein" content="Kaffens Arv" />
-    <title>Handlekurv</title>
+    <meta
+      name="description"
+      content="Kaffens arv - en kafé som feirer kaffekultur og bærekraft"
+    />
+    <meta name="author" content="Gruppe 1" />
+    <title>Handlekurv - Kaffens Arv</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel = "stylesheet" href="css/handlekurv.css"/>
+    <link rel="stylesheet" href="css/handlekurv.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,34 +20,34 @@
     />
   </head>
   <body>
-     
-      
     <header class="headerMain">
       <div class="header-container">
-
-      
-      <div class="logoImg">
-        <img src="./assets/logokaffensarv.png" alt="bilde av logo" />
-      </div>
-      <div class="headerButtons">
-        <ul>
-          <li>Forside</li>
-          <li>Meny</li>
-          <li>Om oss</li>
-          <li>Bærekraft</li>
-          <li>Handlekurv</li>
-        </ul>
-      </div>
+        <div class="logoImg">
+          <img src="./assets/logokaffensarv.png" alt="bilde av logo" />
+        </div>
+        <div class="headerButtons">
+          <ul>
+            <li><a href="./index.html">Forside</a></li>
+            <li><a href="./Meny.html">Meny</a></li>
+            <li><a href="#">Om oss</a></li>
+            <li><a href="#">Bærekraft</a></li>
+            <li><a href="./BestillingsSide.html"> Handlekurv</a></li>
+          </ul>
+        </div>
       </div>
     </header>
 
     <!--Shaima sin del-start-->
-    <main> 
-    <section aria-label="Bestillingsoversikt" class="order-list">
-      <!-- Produkt 1 -->
-      <article class="order-item" data-price="70">
-        <img src="assets/kald drikke/islatte-karamell.png" alt="Islatte Karamell, kald drikke med karamell" />
+    <main>
+      <section aria-label="Bestillingsoversikt" class="order-list">
+        <!-- Produkt 1 -->
+        <article class="order-item" data-price="70">
+          <img
+            src="assets/kald drikke/islatte-karamell.png"
+            alt="Islatte Karamell, kald drikke med karamell"
+          />
 
+<<<<<<< HEAD
         <div class="order-info">
           <h2 class="icelatte">Islatte Karamell</h2>
 
@@ -76,11 +79,117 @@
         <p class="price" aria-label="Pris per stk 129 kroner">129kr</p>
          <button class="delete-btn" aria-label="Fjern Creamy Avocado Bagel fra bestillingen">Slett🗑️</button>
       </article>
+=======
+          <div class="order-info">
+            <h2 class="product-name">Islatte Karamell</h2>
 
-      <!-- Produkt 3 -->
-      <article class="order-item" data-price="55">
-        <img src="assets/Desserter/pumpkinbolle.png" alt="Pumpkin Bolle med gresskarfyll" />
+            <div
+              class="counter"
+              role="group"
+              aria-label="Antall Islatte Karamell"
+            >
+              <button
+                class="minus"
+                aria-label="Reduser antall Islatte Karamell"
+              >
+                −
+              </button>
+              <span class="count" aria-live="polite">1</span>
+              <button class="plus" aria-label="Øk antall Islatte Karamell">
+                +
+              </button>
+            </div>
+          </div>
 
+          <p class="price" aria-label="Pris per stk 70 kroner">70kr</p>
+        </article>
+
+        <!-- Produkt 2 -->
+        <article class="order-item" data-price="129">
+          <img
+            src="assets/mat/creamy-avocado-bagel.png"
+            alt="Creamy Avocado Bagel med kremet fyll"
+          />
+
+          <div class="order-info">
+            <h2 class="product-name">Creamy Avocado Bagel</h2>
+
+            <div
+              class="counter"
+              role="group"
+              aria-label="Antall Creamy Avocado Bagel"
+            >
+              <button
+                class="minus"
+                aria-label="Reduser antall Creamy Avocado Bagel"
+              >
+                −
+              </button>
+              <span class="count" aria-live="polite">1</span>
+              <button class="plus" aria-label="Øk antall Creamy Avocado Bagel">
+                +
+              </button>
+            </div>
+          </div>
+
+          <p class="price" aria-label="Pris per stk 129 kroner">129kr</p>
+        </article>
+
+        <!-- Produkt 3 -->
+        <article class="order-item" data-price="55">
+          <img
+            src="assets/Desserter/pumpkinbolle.png"
+            alt="Pumpkin Bolle med gresskarfyll"
+          />
+
+          <div class="order-info">
+            <h2 class="product-name">Pumpkin Bolle</h2>
+
+            <div class="counter" role="group" aria-label="Antall Pumpkin Bolle">
+              <button class="minus" aria-label="Reduser antall Pumpkin Bolle">
+                −
+              </button>
+              <span class="count" aria-live="polite">1</span>
+              <button class="plus" aria-label="Øk antall Pumpkin Bolle">
+                +
+              </button>
+            </div>
+          </div>
+
+          <p class="price" aria-label="Pris per stk 55 kroner">55kr</p>
+        </article>
+      </section>
+
+      <section aria-label="Bestillingssummering" class="summary">
+        <div class="total-section">
+          <button id="order-btn" aria-label="Fullfør bestilling">
+            Bestill
+          </button>
+          <div class="total">
+            <h3>Total</h3>
+            <p id="total-price" aria-live="polite">270kr</p>
+          </div>
+        </div>
+
+        <div class="extra-buttons" role="group" aria-label="Flere alternativer">
+          <button id="clear-btn" aria-label="Tøm handlekurv">Tøm alt</button>
+          <button id="table-btn" aria-label="Legg til bordnummer">
+            Legg til bordnummer
+          </button>
+        </div>
+
+        <p id="table-number" aria-live="polite"></p>
+      </section>
+>>>>>>> 2603a1aa932d75369c1ed23445a5f984aab8c0c9
+
+      <section aria-label="Kontakt og forespørselsskjema" class="contact-form">
+        <p>
+          Ønsker du å bestille en større ordre eller catering?
+          <br />
+          Bruk skjemaet under for å sende oss en forespørsel.
+        </p>
+
+<<<<<<< HEAD
         <div class="order-info">
           <h2 class="pumpkin">Pumpkin Bolle</h2>
 
@@ -95,72 +204,72 @@
          <button class="delete-btn" aria-label="Fjern Pumpkin Bolle fra bestillingen">Slett🗑️</button>
       </article>
     </section>
+=======
+        <form aria-labelledby="form-title">
+          <h2 id="form-title">Forespørselsskjema</h2>
 
-    <section aria-label="Bestillingssummering" class="summary">
-      <div class="total-section">
-        <button id="order-btn" aria-label="Fullfør bestilling">Bestill</button>
-        <div class="total">
-          <h3>Total</h3>
-          <p id="total-price" aria-live="polite">270kr</p>
-        </div>
-      </div>
+          <label for="fullname">Fullt navn</label>
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            required
+            aria-required="true"
+          />
 
-      <div class="extra-buttons" role="group" aria-label="Flere alternativer">
-        <button id="clear-btn" aria-label="Tøm handlekurv">Tøm alt</button>
-        <button id="table-btn" aria-label="Legg til bordnummer">Legg til bordnummer</button>
-      </div>
+          <label for="email">E-post</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            aria-required="true"
+          />
+>>>>>>> 2603a1aa932d75369c1ed23445a5f984aab8c0c9
 
-      <p id="table-number" aria-live="polite"></p>
-    </section>
+          <label for="subject">Emne</label>
+          <input type="text" id="subject" name="subject" />
 
-    <section aria-label="Kontakt og forespørselsskjema" class="contact-form">
-      <p>
-        Ønsker du å bestille en større ordre eller catering?  
-        <br />
-        Bruk skjemaet under for å sende oss en forespørsel.
-      </p>
+          <label for="message">Beskrivelse av hva du ønsker</label>
+          <textarea id="message" name="message" rows="4"></textarea>
 
-      <form aria-labelledby="form-title">
-        <h2 id="form-title">Forespørselsskjema</h2>
+          <button type="submit" id="send-btn" aria-label="Send forespørsel">
+            Send forespørsel
+          </button>
+        </form>
 
-        <label for="fullname">Fullt navn</label>
-        <input type="text" id="fullname" name="fullname" required aria-required="true" />
+        <p id="confirmation" aria-live="polite"></p>
+      </section>
+    </main>
 
-        <label for="email">E-post</label>
-        <input type="email" id="email" name="email" required aria-required="true" />
-
-        <label for="subject">Emne</label>
-        <input type="text" id="subject" name="subject" />
-
-        <label for="message">Beskrivelse av hva du ønsker</label>
-        <textarea id="message" name="message" rows="4"></textarea>
-
-        <button type="submit" id="send-btn" aria-label="Send forespørsel">Send forespørsel</button>
-      </form>
-
-      <p id="confirmation" aria-live="polite"></p>
-    </section>
-  </main>
-
-  <!--Shaima sin del-slutt-->
-
-  <footer>
-    <p>&copy; 2025 Kafé Bestilling. Alle rettigheter reservert.</p>
-  </footer>
-
- 
-    <!-- siljes kommentar -->
+    <!--Shaima sin del-slutt-->
 
     <footer>
-      <p>
+      <p>&copy; 2025 Kafé Bestilling. Alle rettigheter reservert.</p>
+    </footer>
+
+    <footer>
+      <p class="left">
         Kontakt oss<br />
         Storgata 12<br />
         0161 Oslo<br />
         Tlf: 22334455
       </p>
 
-      <p>© 2025 Kaffens arv</p>
+      <p class="center">© 2025 Kaffens arv</p>
+
+      <nav class="right">
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="assets/footer/facebook.png" alt="Facebook" class="icon" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="assets/footer/instagram.png" alt="Instagram" class="icon" />
+        </a>
+        <a href="mailto:post@kaffensarv.no">
+          <img src="assets/footer/mail.png" alt="E-post" class="icon" />
+        </a>
+      </nav>
     </footer>
-    <script src="JS/handlekurv.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

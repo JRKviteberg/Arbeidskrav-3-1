@@ -1,7 +1,12 @@
-@import "./index.css";
 @import "./header.css";
 @import "./main.css";
 @import "./footer.css";
 @import "./global.css";
+<<<<<<< HEAD
 @import "./forside.css";
 @import "./BestillingsSide.css";
+=======
+@import "./index.css";
+@import "./takkeside.css";
+@import "./mediaqueries-forside.css";
+>>>>>>> 2603a1aa932d75369c1ed23445a5f984aab8c0c9

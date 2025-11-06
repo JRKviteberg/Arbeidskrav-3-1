@@ -1,40 +1,41 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .headerMain {
-    background-color: #580404;
-    height: 164px;
+  background-color: #580404;
+  height: 164px;
+  width: 100%;
 }
 
 .logoImg {
-    display: flex;
-    height:124px;
-    justify-content: center;
+  display: flex;
+  height: 124px;
+  justify-content: center;
+  padding: 10px;
 }
 
 .headerButtons ul {
-    color: white;
-    display: flex;
-    /* justify-content: center; */
-    justify-content: space-around;
-    list-style-type: none;
-    flex-direction: row;
+  color: white;
+  display: flex;
+  /* justify-content: center; */
+  justify-content: space-around;
+  list-style-type: none;
+  flex-direction: row;
 }
 
 .headerButtons li {
-
-font-size: 22px;
-cursor: pointer;
-font-family: "Karma", serif;
-font-weight: 500;
-border-radius: 12px;
-padding: 0 12px;
+  font-size: 22px;
+  cursor: pointer;
+  font-family: "Karma", serif;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 0 12px;
 }
 
 .headerButtons li:hover {
- background-color: #BD8B8B;
- transform: scale(1.05);
-}  
+  background-color: #bd8b8b;
+  transform: scale(1.05);
+}
