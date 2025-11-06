@@ -1,7 +1,6 @@
 //const = connect JS variable to HTML element that already exists on the page
 
 
-
 // disse finner alle produktene (hver artikkel med klassen "order-item")
 //"go find all my products on the page and remember them in this lisrt callded "produkter""
 const produkter = document.querySelectorAll("order-item");
@@ -25,6 +24,7 @@ const bordBtn = document.getElementById("table-btn"); //knappen for å legge til
 //start at 0 before we add anything 
 //each time we click +/- buttons, we will recalculate this number and update it
 let totalPris = 0; //variabel for å holde styr på totalprisen
+
 
 
 
