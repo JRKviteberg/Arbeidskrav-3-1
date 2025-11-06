@@ -1,8 +1,8 @@
 const teamMembers = [
-    {name: "Jan-Roger", email: "janroger@kaffensarv.no", image: "assets/takkeside/barista-mann.png"},
-    {name: "Silje", email: "silje@kaffensarv.no", image: "assets/takkeside/barista-dame.png"},
-    {name: "Shaima", email: "shaima@kaffensarv.no", image: "assets/takkeside/barista-dame.png"},
-    {name: "Jostein", email: "jostein@kaffensarv.no", image: "assets/takkeside/barista-mann.png"}
+    {name: "Jan-Roger", email: "janroger@kaffensarv.no", image: "assets/images/barista-mann.png"},
+    {name: "Silje", email: "silje@kaffensarv.no", image: "assets/images/barista-dame.png"},
+    {name: "Shaima", email: "shaima@kaffensarv.no", image: "assets/images/barista-dame.png"},
+    {name: "Jostein", email: "jostein@kaffensarv.no", image: "assets/images/barista-mann.png"}
 ];
 
 const container = document.getElementById("team-container");
