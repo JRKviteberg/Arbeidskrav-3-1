@@ -27,20 +27,10 @@ body {
   object-fit: cover;
 }
 
-<<<<<<< HEAD
-
-
-h1,
-h2,
-h3 {
-  line-height: 2.5;
-
-=======
 h1,
 h2,
 h3 {
   line-height: 2;
->>>>>>> 2603a1aa932d75369c1ed23445a5f984aab8c0c9
 }
 
 /* Produktliste */
@@ -260,13 +250,8 @@ textarea:focus {
   margin-top: 15px;
 }
 
-<<<<<<< HEAD
-/*Responsive*/
-@media (max-width: 770px) {
-=======
 /* ======== RESPONSIV ======== */
 @media (max-width: 768px) {
->>>>>>> 2603a1aa932d75369c1ed23445a5f984aab8c0c9
   .order-item {
     flex-direction: column;
     align-items: center;
@@ -301,7 +286,6 @@ textarea:focus {
 
   .extra-buttons button {
     width: 50%;
-<<<<<<< HEAD
 
   }
 
@@ -322,7 +306,3 @@ textarea:focus {
 
 
 }
-=======
-  }
-}
->>>>>>> 2603a1aa932d75369c1ed23445a5f984aab8c0c9
