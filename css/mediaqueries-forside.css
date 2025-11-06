@@ -1,11 +1,4 @@
-@media (min-width: 1400px) {
-  /*body {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Midstiller alt innhold */
-  */
-
-  /* Begrens maks bredde på alt innhold */
+/*@media (min-width: 1400px) {
   header,
   section,
   footer,
@@ -13,33 +6,35 @@
   #monthlyspecial,
   .cafecard,
   .cafecard2,
-  #openinghours
-  #coffeeimg {
+  #openinghours #coffeeimg {
     width: 100%;
     padding-left: 40px;
     padding-right: 40px;
     margin: 0 auto;
   }
-
-  /* Midstill hero-bildet */
-  .heroImage img {
-    max-width: 1200px;
-    width: 100%;
-    height: auto;
+  .menu-button {
+    display: none;
   }
 
-  /* Sørg for at footer følger samme layout */
-  /*footer {
-    max-width: 1200px;
-    width: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
-  }*/
+  .nav-inline {
+    display: flex;
+  }
+
+  .nav-inline ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
 }
+*/
 
 @media (max-width: 750px) {
   .headerButtons {
     display: none;
+  }
+
+  .menu-button {
+    display: block;
   }
 
   .heroImage {
@@ -102,9 +97,30 @@
   footer nav.right {
     justify-content: center;
   }
+  .menu-button {
+    display: none;
+  }
+
+  .nav-inline {
+    display: flex;
+  }
+
+  .nav-inline ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
 }
 
 @media (max-width: 480px) {
+  .headerButtons {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
   #monthlyspecial {
     display: flex;
     flex-direction: column;
@@ -133,7 +149,12 @@
     height: auto;
     border-radius: 5px;
   }
-
+  .cafecard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
   .cafecard img {
     width: 100%;
     max-width: 100%;
@@ -147,6 +168,12 @@
     font-size: 16px;
   }
 
+  #coffeeimg {
+    display: none;
+  }
+  .cafecard2 {
+    display: none;
+  }
   footer {
     flex-direction: column;
     align-items: center;

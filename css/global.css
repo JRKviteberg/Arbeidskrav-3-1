@@ -7,6 +7,8 @@
   --scnbtn-hov: #e5b999;
   --third-btn: #00694b;
   --third-btn-hov: #26aa85;
+  --radius: 0.75rem;
+  --border: #e5e7eb;
 }
 
 body {
