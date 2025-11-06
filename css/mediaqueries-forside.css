@@ -14,7 +14,6 @@
   .cafecard,
   .cafecard2,
   #openinghours {
-    max-width: 1200px; /* Du kan endre til 1300, 1400, etc. */
     width: 100%;
     padding-left: 40px;
     padding-right: 40px;
