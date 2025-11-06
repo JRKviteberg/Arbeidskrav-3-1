@@ -27,6 +27,11 @@
   }
 }
 */
+@media (min-width: 751px) {
+  .menu-button {
+    display: none;
+  }
+}
 
 @media (max-width: 750px) {
   .headerButtons {
