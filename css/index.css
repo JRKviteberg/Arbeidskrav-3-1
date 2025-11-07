@@ -104,3 +104,56 @@
 .dark-mode li {
   color: #e6e6e6;
 }
+
+#mobile-menu[popover] {
+  position: fixed;
+  right: 0;
+  left: auto;
+  width: min(90vw, 20rem);
+  height: 100dvh;
+  overflow: auto;
+  background-color: var(--maincolor-hov);
+  border: 3px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-left: auto;
+}
+
+#mobile-menu header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border: 0;
+  background-color: transparent;
+  padding: 0 0 1rem;
+  color: var(--text);
+}
+
+#mobile-menu nav ul {
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+#mobile-menu nav a {
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.menu-button {
+  margin-left: auto;
+  border: 2px solid var(--border);
+  background-color: transparent;
+  padding: 0.3rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.button-close {
+  border: 2px solid var(--border);
+  background: transparent;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
