@@ -1,24 +1,34 @@
+
 :root {
-  --main-green: #144d2a;
-  --accent-bg: #fdf7ed;
-  --text-dark: #1e1e1e;
-  --gray: #ccc;
+  --maintext: #000;
+  --bg: #fffaef;
+  --maincolor: #580404;
+  --maincolor-hov: #bd8b8b;
+  --scndbtn: #8b5f40;
+  --scnbtn-hov: #e5b999;
+  --third-btn: #00694b;
+  --third-btn-hov: #26aa85;
   --focus-outline: 3px solid #144d2a;
   --transition: all 0.2s ease-in-out;
 }
+
+
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Poppins", "Arial", sans-serif;
-  background-color: #fffefc;
+  background-color: var(--bg);
   color: var(--text-dark);
   margin: 0;
-
   padding-bottom: 100px;
   line-height: 1.5;
+}
+
+section{
+ 
+
 }
 
 .order-item img {
@@ -49,7 +59,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 2px solid var(--gray);
+  border-bottom: 2px solid var(--maincolor);
   padding: 15px 0;
   gap: 1.5rem;
   position: relative;
@@ -76,7 +86,7 @@ h3 {
 }
 
 .counter button {
-  background-color: #e0e0e0;
+  background-color: var(--third-btn);
   border: none;
   padding: 8px 12px;
   border-radius: 8px;
@@ -87,7 +97,7 @@ h3 {
 
 .counter button:hover,
 .counter button:focus {
-  background-color: #cfcfcf;
+  background-color: var(--third-btn-hov);
   outline: var(--focus-outline);
 }
 
@@ -103,6 +113,7 @@ h3 {
   margin: 0 auto;
   font-size: 1.1rem;
   font-weight: 450;
+  
 }
 
 .total-section {
@@ -116,11 +127,14 @@ h3 {
 .total-section h3 {
   margin: 0;
   font-size: 1.1rem;
-
+}
+.total-section p {
+  align-items: center;
+  flex-direction: column;
 }
 
 #order-btn {
-  background-color: var(--main-green);
+  background-color: var(--third-btn);
   color: #fff;
   padding: 10px 20px;
   border-radius: 8px;
@@ -132,7 +146,7 @@ h3 {
 
 #order-btn:hover,
 #order-btn:focus {
-  background-color: #0f3e21;
+  background-color: var(--third-btn-hov);
   outline: var(--focus-outline);
 }
 
@@ -143,10 +157,24 @@ h3 {
   flex-wrap: wrap;
 }
 
+#clear-btn{
+  color: white;
+  
+}
+
+#table-btn{
+  color: white;
+}
+
+.plus, .minus{
+  color: white;
+
+}
+
 .extra-buttons button {
   flex: 1;
   min-width: 120px;
-  background-color: #e5e5e5;
+  background-color: var(--scndbtn);
   padding: 8px 12px;
   border-radius: 8px;
   border: none;
@@ -156,7 +184,7 @@ h3 {
 
 .extra-buttons button:hover,
 .extra-buttons button:focus {
-  background-color: #fbf8f8;
+  background-color: var(--scnbtn-hov);
   outline: var(--focus-outline);
 }
 
@@ -166,9 +194,12 @@ h3 {
   font-size: 1rem;
 }
 
+
+
+
 /*Delete button*/
 .delete-btn {
-  background-color: #151515;
+  background-color: var(--maincolor);
   color: white;
   border-radius: 8px;
   padding: 6px 12px;
@@ -191,7 +222,7 @@ h3 {
 .contact-form {
   max-width: 600px;
   margin: 2rem auto;
-  background-color: var(--accent-bg);
+  background-color: wheat;
   padding: 20px;
   border-radius: 12px;
 }
@@ -215,7 +246,7 @@ input,
 textarea {
   margin-top: 5px;
   padding: 10px;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--text-dark);
   border-radius: 8px;
   font-size: 1rem;
 }
@@ -226,7 +257,7 @@ textarea:focus {
 }
 
 #send-btn {
-  background-color: var(--main-green);
+  background-color: var(--third-btn);
   color: #fff;
   border: none;
   padding: 10px;
@@ -239,7 +270,7 @@ textarea:focus {
 
 #send-btn:hover,
 #send-btn:focus {
-  background-color: #0f3e21;
+  background-color: var(--third-btn-hov);
   outline: var(--focus-outline);
 }
 
@@ -274,6 +305,11 @@ textarea:focus {
     gap: 20px;
   }
 
+  .total-section p{
+    display: flex;
+    
+  }
+
   #order-btn {
     width: 40%;
     text-align: center;
@@ -294,15 +330,11 @@ textarea:focus {
     align-items: center;
     width: 95%;
 
-  
-
   }
 
   .delete-btn {
     margin-left: 0;
   }
-
-  
 
 
 }

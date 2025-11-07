@@ -41,10 +41,11 @@
     <!--Shaima sin del-start-->
     <main>
       <section aria-label="Bestillingsoversikt" class="order-list">
+
         <!-- Produkt 1 -->
         <article class="order-item" data-price="70">
           <img
-            src="assets/images/islatte-karamell.png"
+            src="./assets/images/islatte-karamell.png"
             alt="Islatte Karamell, kald drikke med karamell"
           />
 
@@ -64,7 +65,7 @@
 
       <!-- Produkt 2 -->
       <article class="order-item" data-price="129">
-        <img src="assets/mat/creamy-avocado-bagel.png" alt="Creamy Avocado Bagel med kremet fyll" />
+        <img src="./assets/images/creamy-avocado-bagel.png" alt="Creamy Avocado Bagel med kremet fyll" />
 
         <div class="order-info">
           <h2 class="bagel">Creamy Avocado Bagel</h2>
@@ -80,42 +81,72 @@
          <button class="delete-btn" aria-label="Fjern Creamy Avocado Bagel fra bestillingen">Slett🗑️</button>
       </article>
 
-      <section aria-label="Kontakt og forespørselsskjema" class="contact-form">
-        <p>
-          Ønsker du å bestille en større ordre eller catering?
-          <br />
-          Bruk skjemaet under for å sende oss en forespørsel.
-        </p>
+
+      <!-- Produkt 3 -->
+      <article class="order-item" data-price="55">
+        <img src="./assets/images/pumpkinbolle.png" alt="Pumpkin Bolle, rund bolle med gresskar" />
 
         <div class="order-info">
-          <h2 class="pumpkin">Pumpkin Bolle</h2>
+          <h2 class="pumpkin ">Pumkin bolle</h2>
 
-          <div class="counter" role="group" aria-label="Antall Pumpkin Bolle">
-            <button class="minus" aria-label="Reduser antall Pumpkin Bolle">−</button>
+          <div class="counter" role="group" aria-label="Pumpkin bolle med gresskarfyll">
+            <button class="minus" aria-label="Reduser antall Creamy Avocado Bagel">−</button>
             <span class="count" aria-live="polite">0</span>
-            <button class="plus" aria-label="Øk antall Pumpkin Bolle">+</button>
+            <button class="plus" aria-label="Øk antall Creamy Avocado Bagel">+</button>
           </div>
         </div>
 
         <p class="price" aria-label="Pris per stk 55 kroner">55kr</p>
-         <button class="delete-btn" aria-label="Fjern Pumpkin Bolle fra bestillingen">Slett🗑️</button>
+         <button class="delete-btn" aria-label="Fjern pumpkin bolle fra bestillingen">Slett🗑️</button>
       </article>
+
+
+
+      <!-- Total pris seksjon -->
+       <section aria-label="Bestillingssummering" class="summary">
+        <div class="total-section">
+          <button id="order-btn" arial-label="Fullfør bestilling">Fullfør bestilling</button>
+          <div class="Total">
+            <h3>Total pris:</h3>
+            <p id="total-price" aria-live="polite">0kr</p>
+            </div> 
+          </div>
+
+          <div class="extra-buttons" role="group" aria-label="Ekstra handlingsknapper">
+            <button id="clear-btn" aria-label="Tøm handlekurv">Tøm handlekurv</button>
+            <button id="table-btn" aria-label="Legg til bordnummer">Legg til bordnummer</button>
+
+              <p id="table-number" aria-live="polite"></p>
     </section>
+           
+      <section aria-label="Kontakt og forespørselsskjema" class="contact-form">
+      <p>
+        Ønsker du å bestille en større ordre eller catering?  
+        <br />
+        Bruk skjemaet under for å sende oss en forespørsel.
+      </p>
 
-          <label for="subject">Emne</label>
-          <input type="text" id="subject" name="subject" />
+      <form aria-labelledby="form-title">
+        <h2 id="form-title">Forespørselsskjema</h2>
 
-          <label for="message">Beskrivelse av hva du ønsker</label>
-          <textarea id="message" name="message" rows="4"></textarea>
+        <label for="fullname">Fullt navn</label>
+        <input type="text" id="fullname" name="fullname" required aria-required="true" />
 
-          <button type="submit" id="send-btn" aria-label="Send forespørsel">
-            Send forespørsel
-          </button>
-        </form>
+        <label for="email">E-post</label>
+        <input type="email" id="email" name="email" required aria-required="true" />
 
-        <p id="confirmation" aria-live="polite"></p>
-      </section>
-    </main>
+        <label for="subject">Emne</label>
+        <input type="text" id="subject" name="subject" />
+
+        <label for="message">Beskrivelse av hva du ønsker</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit" id="send-btn" aria-label="Send forespørsel">Send forespørsel</button>
+      </form>
+
+      <p id="confirmation" aria-live="polite"></p>
+    </section>
+  </main>
 
     <!--Shaima sin del-slutt-->
 
@@ -145,6 +176,6 @@
         </a>
       </nav>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="JS/handlekurv.js"></script>
   </body>
 </html>
