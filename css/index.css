@@ -175,3 +175,9 @@ strong {
   border-radius: var(--radius);
   cursor: pointer;
 }
+
+#mobile-menu nav a:hover {
+  background-color: var(--maincolor-hov);
+
+  border-radius: var(--radius);
+}
