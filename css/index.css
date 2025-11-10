@@ -26,6 +26,7 @@
 
 .monthlytext {
   display: flex;
+  flex-direction: column;
   text-align: center;
   max-width: 600px;
   padding: 50px;
