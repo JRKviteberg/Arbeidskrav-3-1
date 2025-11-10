@@ -1,41 +1,6 @@
-/*@media (min-width: 1400px) {
-  header,
-  section,
-  footer,
-  .heroImage,
-  #monthlyspecial,
-  .cafecard,
-  .cafecard2,
-  #openinghours #coffeeimg {
-    width: 100%;
-    padding-left: 400px;
-    padding-right: 400px;
-    margin: 0 auto;
-  }
-  .menu-button {
-    display: none;
-  }
-
-  .nav-inline {
-    display: flex;
-  }
-
-  .nav-inline ul {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-  }
-}
-*/
 @media (min-width: 751px) {
   .menu-button {
     display: none;
-  }
-  .body {
-    width: 100%;
-    padding-left: 400px;
-    padding-right: 400px;
-    margin: 0 auto;
   }
 }
 

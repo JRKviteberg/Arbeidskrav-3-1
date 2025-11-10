@@ -122,11 +122,16 @@
   width: min(90vw, 20rem);
   height: 100dvh;
   overflow: auto;
-  background-color: var(--maincolor-hov);
+  background-color: var(--bg);
   border: 3px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem;
   margin-left: auto;
+  font-family: "Karma", serif;
+}
+
+strong {
+  font-size: 30px;
 }
 
 #mobile-menu header {
@@ -148,7 +153,10 @@
 
 #mobile-menu nav a {
   padding: 0.5rem;
+  font-size: 20px;
+  font-weight: 700;
   text-decoration: none;
+  color: var(--maintext);
 }
 
 .menu-button {
