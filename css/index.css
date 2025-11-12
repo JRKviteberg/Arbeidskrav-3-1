@@ -1,3 +1,10 @@
+#beanbutton {
+  background-color: var(--bg);
+  border: #fffefb 0.1px solid;
+  padding: 10px;
+  color: var(--bg);
+}
+
 #mainpic {
   text-align: center;
   margin: 30px;

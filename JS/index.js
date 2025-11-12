@@ -15,3 +15,11 @@ toggleBtn.addEventListener("click", () => {
 
   console.log("Dark mode toggled");
 });
+
+const logobutton = document.getElementById('beanbutton');
+
+logobutton.addEventListener("click", growSprout);
+
+function growSprout() {
+  alert("The logo was clicked!");
+}
