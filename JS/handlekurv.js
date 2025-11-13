@@ -1,5 +1,9 @@
 // selecting all products in the cart (all <article> elements) with class".order-item"
-const produkter = document.querySelectorAll(".order-item"); //loks for ALL elements with class ".order-item" stored in produkter
+
+//select the headinf that shows the number of orders
+const headingEl = document.getElementById("cart-title");
+
+const produkter = document.querySelectorAll(".order-item"); //looks for ALL elements with class ".order-item" stored in produkter
 
 //select the element that will show total price
 const totalEl = document.getElementById("total-price"); //will use this ti displat the total price in the cart
@@ -19,68 +23,54 @@ const orderList = document.getElementById("table-btn"); //after clicking this bu
 //select the container holding all order items
 const orderlist = document.querySelectorAll(".order-list"); //selecting the parent container of all products
 
-//to keep track of total price
-let totalPris = 0; //starts at 0, will update whenever the user adds/removes items
+//function that updates the "mine ordre (x)" text
+function updateOrderCount() {
+  let totalItems = 0;
 
-//function that will calculate the total price
-function updateTotal() {
-  
-  totalPris = 0; // Reset total price
+  //loop through all order items and add up the counts
+  for (let i = 0; i < produkter.length; i++) {
+    const count = parseInt(produkter[i].querySelector(".count").textContent);
+    totalItems += count;
 
-  // Loop through all products
-  produkter.forEach((produkt) => {
-    const pris = Number(produkt.dataset.price); // price of product
-    const antall = Number(produkt.querySelector(".count").textContent); // quantity
-    totalPris += pris * antall; // add to total
-  });
+    //update heading text with total count
+    headingEl.textContent = `Mine ordre (${totalItems})`;
 
-  // Calculate total number of items
-  const totalAntall = Array.from(produkter).reduce(
-    (sum, p) => sum + Number(p.querySelector(".count").textContent),
-    0
-  );
-
-  // Apply discount if 5 or more items
-  if (totalAntall >= 5) {
-    totalEl.textContent = `${(totalPris * 0.9).toFixed(2)} kr (10% rabatt!)`;
-  } else {
-    totalEl.textContent = `${totalPris.toFixed(2)} kr`;
+    updateOrderCount();
   }
 }
 
-//reset totalPris to 0
-//Loop through each product -> get price from data-price attribute, -> get quantity from the .count span -> multiply price x quantity and add to totalPris.
-//count total items using reduce()
-//if 5 or more items -> apply 10% discount
-//update totalEl to show the new price
+//Loop through every order item
+//iterate -> do the same action to every itrms in a list (for similar collection of data)
+for (let i = 0; i < produkter.length; i++) {
+  //selecting Buttons and Count display within each item
+  const item = produkter[i];
+  const minusBtn = item.querySelector(`.minus`);
+  const plusBtn = item.querySelector(`.plus`);
+  const countElement = item.querySelector(`.count`);
 
+  //plus button -> increase quantity
+  plusBtn.addEventListener(`click`, function () {
+    let currentCount = parseInt(countElement.textContent);
+    currentCount++;
+    countElement.textContent = currentCount;
 
-//+/- button functionality
-produkter.forEach((produkt) => {
-  const minus = produkt.querySelector(".minus");
-  const plus = produkt.querySelector(".plus");
-  const antallEl = produkt.querySelector(".count");
-
-  minus.addEventListener("click", () => {
-    let antall = Number(antallEl.textContent);
-    if (antall > 0) antall--;
-    antallEl.textContent = antall;
-    updateTotal();
+    //update the total price each time item is added
+    updateTotalPrice();
+    updateOrderCount();
   });
 
-  plus.addEventListener("click", () => {
-    let antall = Number(antallEl.textContent);
-    antall++;
-    antallEl.textContent = antall;
-    updateTotal();
+  //minus button -> decrease quantity
+  minusBtn.addEventListener(`click`, function () {
+    let currentCount = parseInt(countElement.textContent);
+    if (currentCount > 0) {
+      currentCount--;
+      countElement.textContent = currentCount;
+
+      //update the total price eahc time item is added
+      updateTotalPrice();
+      updateOrderCount();
+    }
   });
-});
-
-//for each product, find the plus/minus buttons and the quantity span
-//when minus is clicked -> decrease quantity by 1(not under 0), -> update html and total price
-//when plus is clicked -> increase quantity by 1, -> update the html and total price
+}
 
 
-
-
- 
