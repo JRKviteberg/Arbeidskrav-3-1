@@ -7,14 +7,14 @@
   padding: 48px 16px;
 }
 
-.thankyou-message h1{
+.thankyou-message h1 {
   padding-bottom: 15px;
 }
 
 .thankyou-message p {
   font-size: 22px;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0auto;
   padding-bottom: 50px;
 }
 
@@ -26,7 +26,6 @@
 .team-section h2 {
   margin-bottom: 16px;
   padding-bottom: 30px;
-
 }
 
 .team-container {
@@ -43,7 +42,7 @@
   border-radius: 12px;
   padding: 24px;
   width: 100%;
-  max-width: 300px;
+  max-width: 200px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
@@ -89,6 +88,73 @@
 
 .team-card button:hover {
   background-color: var(--scnbtn-hov);
+}
+
+#mobile-menu[popover] {
+  position: fixed;
+  right: 0;
+  left: auto;
+  width: min(90vw, 20rem);
+  height: 100dvh;
+  overflow: auto;
+  background-color: var(--bg);
+  border: 3px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-left: auto;
+  font-family: "Karma", serif;
+}
+
+strong {
+  font-size: 30px;
+}
+
+#mobile-menu header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border: 0;
+  background-color: transparent;
+  padding: 0 0 1rem;
+  color: var(--text);
+}
+
+#mobile-menu nav ul {
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+#mobile-menu nav a {
+  padding: 0.5rem;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--maintext);
+}
+
+.menu-button {
+  margin-left: auto;
+  border: 2px solid var(--border);
+  background-color: transparent;
+  padding: 0.3rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.button-close {
+  border: 2px solid var(--border);
+  background: transparent;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+#mobile-menu nav a:hover {
+  background-color: var(--maincolor-hov);
+
+  border-radius: var(--radius);
 }
 
 @media (max-width: 700px) {

@@ -1,32 +1,3 @@
-/*@media (min-width: 1400px) {
-  header,
-  section,
-  footer,
-  .heroImage,
-  #monthlyspecial,
-  .cafecard,
-  .cafecard2,
-  #openinghours #coffeeimg {
-    width: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin: 0 auto;
-  }
-  .menu-button {
-    display: none;
-  }
-
-  .nav-inline {
-    display: flex;
-  }
-
-  .nav-inline ul {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-  }
-}
-*/
 @media (min-width: 751px) {
   .menu-button {
     display: none;
@@ -34,27 +5,22 @@
 }
 
 @media (max-width: 750px) {
-  .headerButtons {
-    display: none;
-  }
-
-  .menu-button {
-    display: block;
-  }
-
   .heroImage {
     max-width: 100%;
   }
 
-  #monthlyspecial {
+  .monthlyspecial {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     text-align: center;
     padding: 15px;
   }
 
   .monthlytext {
+    display: flex;
+    flex-direction: column;
     max-width: 600px;
     margin-bottom: 20px;
   }
@@ -63,7 +29,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
     max-width: 600px;
   }
 
@@ -82,6 +47,10 @@
     align-items: center;
     text-align: center;
     padding: 35px;
+  }
+
+  .cafecard img {
+    max-width: 100%;
   }
 
   .cafecard2 {
@@ -126,16 +95,18 @@
     display: block;
   }
 
-  #monthlyspecial {
+  .monthlyspecial {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     text-align: center;
     padding: 2px;
   }
 
   .monthlytext {
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 15px;
     font-size: 16px;
     padding: 5px;

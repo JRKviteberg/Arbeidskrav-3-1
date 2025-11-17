@@ -43,6 +43,10 @@ h3 {
   line-height: 2;
 }
 
+#cart-title{
+  padding: 2.5rem;
+}
+
 /* Produktliste */
 .order-list {
   max-width: 600px;
