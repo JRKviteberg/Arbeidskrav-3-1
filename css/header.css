@@ -1,4 +1,3 @@
-
 .headerMain {
   background-color: #580404;
   height: 164px;
@@ -9,7 +8,7 @@
   display: flex;
   height: 124px;
   justify-content: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .headerButtons ul {
@@ -19,18 +18,29 @@
   justify-content: space-around;
   list-style-type: none;
   flex-direction: row;
+  padding: 40px;
+  text-decoration: none;
 }
 
-.headerButtons li {
-  font-size: 22px;
+.headerButtons,
+a,
+li {
+  font-size: 30px;
   cursor: pointer;
   font-family: "Karma", serif;
   font-weight: 500;
   border-radius: 12px;
   padding: 0 12px;
+  text-decoration: none;
 }
 
 .headerButtons li:hover {
   background-color: #bd8b8b;
   transform: scale(1.05);
+  text-decoration: none;
+}
+
+.headerButtons a:visited {
+  color: var(--bg);
+  text-decoration: none;
 }
