@@ -14,7 +14,7 @@
 .thankyou-message p {
   font-size: 22px;
   max-width: 600px;
-  margin: 0auto;
+  margin: 0 auto;
   padding-bottom: 50px;
 }
 
@@ -63,6 +63,56 @@
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
+
+/* Popup for "Kontakt meg" */
+.contact-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.contact-content {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  width: 320px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Karma", serif;
+}
+
+.contact-content textarea {
+  height: 100px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  resize: none;
+}
+
+.contact-content button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-content button:first-of-type {
+  background-color: var(--scndbtn);
+  color: #fff;
+}
+
+.contact-content button:last-of-type {
+  background-color: transparent;
+  border: 1px solid var(--border);
+}
+
 
 .team-card h3 {
   margin-bottom: 8px;
