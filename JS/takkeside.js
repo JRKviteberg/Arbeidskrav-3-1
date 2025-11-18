@@ -64,5 +64,5 @@ function openContactForm(name) {
       return;
     }
     alert("Din melding er sendt!");
-  }
+  });
 }

@@ -17,14 +17,14 @@
   box-sizing: border-box;
 }
 
-
 body {
   background-color: var(--bg);
 }
 
-header {
+header nav {
   background-color: var(--maincolor);
   font-family: "Karma", serif;
+  border: 0px;
 }
 
 h1 {

@@ -11,6 +11,10 @@
   padding: 20px;
 }
 
+.headerButtons {
+  background-color: var(--maincolor);
+}
+
 .headerButtons ul {
   color: white;
   display: flex;
