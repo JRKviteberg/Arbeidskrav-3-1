@@ -1,19 +1,35 @@
 const teamMembers = [
-    {name: "Jan-Roger", email: "janroger@kaffensarv.no", image: "assets/images/barista-mann.png"},
-    {name: "Silje", email: "silje@kaffensarv.no", image: "assets/images/barista-dame.png"},
-    {name: "Shaima", email: "shaima@kaffensarv.no", image: "assets/images/barista-dame.png"},
-    {name: "Jostein", email: "jostein@kaffensarv.no", image: "assets/images/barista-mann.png"}
+  {
+    name: "Jan-Roger",
+    email: "janroger@kaffensarv.no",
+    image: "assets/images/barista-mann.png",
+  },
+  {
+    name: "Silje",
+    email: "silje@kaffensarv.no",
+    image: "assets/images/barista-dame.png",
+  },
+  {
+    name: "Shaima",
+    email: "shaima@kaffensarv.no",
+    image: "assets/images/barista-dame.png",
+  },
+  {
+    name: "Jostein",
+    email: "jostein@kaffensarv.no",
+    image: "assets/images/barista-mann.png",
+  },
 ];
 
 const container = document.getElementById("team-container");
 
 for (let i = 0; i < teamMembers.length; i++) {
-    const member = teamMembers[i];
+  const member = teamMembers[i];
 
-    const card = document.createElement("div");
-    card.classList.add ("team-card");
+  const card = document.createElement("div");
+  card.classList.add("team-card");
 
-    card.innerHTML = `
+  card.innerHTML = `
     <img src="${member.image}" alt="Bilde av ${member.name}" class="team-photo">
     <h3>${member.name}</h3>
     <p>${member.email}</p>
