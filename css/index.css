@@ -51,6 +51,7 @@
   flex-direction: row;
   gap: 100px;
   justify-content: space-evenly;
+  padding: 100px;
 }
 
 .bundle-card {
@@ -109,9 +110,6 @@
   border: var(--border);
   border-radius: var(--radius);
   cursor: pointer;
-}
-
-.button-popover[popover] {
 }
 
 #coffeeimg {

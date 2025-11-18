@@ -63,9 +63,6 @@ for (let i = 0; i < monthlybundle.length; i++) {
   container.appendChild(card);
 }
 
-function openContactForm(name) {
-  const message = prompt(`Skriv en melding til ${name}:`);
-  if (message) {
-    alert("Din melding er sendt!");
-  }
+function openOrder(name) {
+  alert("Bestillingen er lagt til i handlekurven!");
 }
