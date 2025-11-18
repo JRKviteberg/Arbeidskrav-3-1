@@ -21,7 +21,7 @@ body {
   background-color: var(--bg);
 }
 
-header nav {
+header .nav {
   background-color: var(--maincolor);
   font-family: "Karma", serif;
   border: 0px;
