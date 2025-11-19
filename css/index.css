@@ -170,6 +170,19 @@
   border-top: #f3f3f3 2px solid;
 }
 
+#beanbutton.off {
+  background-color: var(--bg);
+  border: #fffefb 0.1px solid;
+  padding: 10px;
+  color: var(--bg);
+}
+
+#beanbutton.on {
+  background-color: #000;
+  border: #070707 0.1px solid;
+  padding: 10px;
+  color: #000;
+}
 #toggleBtn.on {
   background-color: var(--maincolor-hov);
   color: white;
