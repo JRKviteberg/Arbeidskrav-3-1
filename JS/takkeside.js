@@ -40,29 +40,33 @@ for (let i = 0; i < teamMembers.length; i++) {
 }
 
 function openContactForm(name) {
-  const popup = document.createElement("div");
-  popup.classList.add("contact-popup");
+    const popup = document.createElement("div");
+    popup.classList.add("contact-popup");
 
-  popup.innerHTML = `
-    <div class="contact-content">
-      <h3>Send melding til ${name}</h3>
-      <textarea id="messageText" placeholder="Skriv meldingen her..."></textarea>
-      <button id="sendMessage">Send</button>
-      <button id="closePopup">Lukk</button>
-    </div>
-  `;
+    popup.innerHTML = `
+      <div class="contact-content">
+        <h3>Send melding til ${name}</h3>
+        <textarea id="messageText" placeholder="Skriv meldingen her..."></textarea>
+        <button id="sendMessage">Send</button>
+        <button id="closePopup">Lukk</button>
+      </div>
+    `;
 
-  document.body.appendChild(popup);
+    document.body.appendChild(popup);
 
-  const sendBtn = popup.querySelector("#sendMessage");
-  const closeBtn = popup.querySelector("#closePopup");
-  const textarea = popup.querySelector("#messageText");
+    const sendBtn = popup.querySelector("#sendMessage");
+    const closeBtn = popup.querySelector("#closePopup");
+    const textarea = popup.querySelector("#messageText");
 
-  sendBtn.addEventListener("click", () => {
-    if (textarea.value.trim() === "") {
-      alert("Skriv en melding før du sender 😊");
-      return;
-    }
-    alert("Din melding er sendt!");
+    sendBtn.addEventListener("click", () => {
+      if (textarea.value.trim() === "") {
+        alert("Skriv en melding før du sender 😊");
+        return;
+      }
+      alert("Din melding er sendt!");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      popup.remove();
   });
 }
