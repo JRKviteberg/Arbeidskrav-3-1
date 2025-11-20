@@ -87,3 +87,21 @@ function updateTotalPrice() {
     totalEl.textContent = `${total}kr`;
   }
 }
+
+
+
+                                                                                          
+//tøm handlekurv knapp
+tømBtn.addEventListener("click", () => {
+  const currentProducts = document.querySelectorAll(".order-item");
+  currentProducts.forEach(p => p.remove());
+
+  updateTotalPrice();
+  updateOrderCount();
+
+  alert("Handlekurven er tømt");
+
+});
+
+
+
