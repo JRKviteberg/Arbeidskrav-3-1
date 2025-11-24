@@ -110,5 +110,5 @@ bestillBtn.addEventListener("click", () => {
     return;
   }
 
-  alert("Takk:) bestilling er fullført");
+  window.location.href = "Takkeside.html";
 });
