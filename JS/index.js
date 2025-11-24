@@ -82,9 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
     logo.style.top = `${startTopPx}px`;
     logo.style.transform = "translateX(-50%)";
 
-    // Sett en standard størrelse med en gang!
     logo.style.width = "120px";
     logo.style.height = "auto";
+    logo.style.opacity = 0;
 
     container.appendChild(logo);
     logoer.push(logo);
@@ -92,19 +92,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function flyttLogoer() {
     for (const logo of logoer) {
-      const size = 50 + Math.random() * 70; // 50 - 120 px
+      const size = 50 + Math.random() * 70;
       logo.style.width = `${size}px`;
       logo.style.height = "auto";
 
       logo.style.left = `${Math.random() * 100}%`;
       logo.style.top = `${Math.random() * window.innerHeight}px`;
       logo.style.transform = "translateX(0)";
+      logo.style.transition = "all 1s";
+      logo.style.opacity = 1;
     }
   }
 
   document.addEventListener("click", flyttLogoer);
 
-  const myInterval = setInterval(flyttLogoer, 3000);
+  const myInterval = setInterval(flyttLogoer, 10000);
 
   function stoppLogoer() {
     clearInterval(myInterval);
@@ -114,9 +116,11 @@ document.addEventListener("DOMContentLoaded", () => {
       logo.style.position = "absolute";
       logo.style.left = `50%`;
       logo.style.top = `20px`;
-      logo.style.transform = `translateX(-50%)`; // sentrer nøyaktig horisontalt
+      logo.style.transform = `translateX(-50%)`;
       logo.style.width = "120px";
       logo.style.height = "auto";
+      logo.style.transition = "all 1s";
+      logo.style.opacity = 0;
     }
   }
 

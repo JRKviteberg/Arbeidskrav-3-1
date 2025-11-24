@@ -69,4 +69,17 @@ function openContactForm(name) {
     closeBtn.addEventListener("click", () => {
       popup.remove();
   });
+
 }
+
+function revealCards() {
+  const cards = document.querySelectorAll(".team-card");
+  const baseDelay = 300;
+  cards.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.add("visible");
+    }, baseDelay + index * 150);
+  });
+}
+
+revealCards();
