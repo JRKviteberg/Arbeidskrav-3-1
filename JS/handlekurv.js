@@ -7,26 +7,7 @@ const bordBtn = document.getElementById("table-btn");
 const orderlist = document.querySelector(".order-list");
 const produkter = document.querySelectorAll(".order-item");
 
-//silje sin del - start
-const toggleBtn = document.getElementById("toggleBtn");
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
 
-  if (document.body.classList.contains("dark-mode")) {
-    toggleBtn.textContent = "Lys modus";
-    toggleBtn.classList.remove("off");
-    toggleBtn.classList.add("on");
-    beanbutton.classList.remove("off");
-    beanbutton.classList.add("on");
-  } else {
-    toggleBtn.textContent = "Mørk modus";
-    toggleBtn.classList.remove("on");
-    toggleBtn.classList.add("off");
-    beanbutton.classList.remove("on");
-    beanbutton.classList.add("off");
-  }
-  console.log("Dark mode toggled");
-}); //silje sin del - slutt
 
 function updateOrderCount() {
   let totalItems = 0;
