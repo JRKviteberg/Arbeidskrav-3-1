@@ -1,16 +1,8 @@
-#beanbutton {
+#stopbutton {
   background-color: var(--bg);
   border: #fffefb 0.1px solid;
   padding: 10px;
   color: var(--bg);
-}
-
-.logo-pic {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
 }
 
 .mainpic {
@@ -178,14 +170,14 @@
   border-top: #f3f3f3 2px solid;
 }
 
-#beanbutton.off {
+#stopbutton.off {
   background-color: var(--bg);
   border: #fffefb 0.1px solid;
   padding: 10px;
   color: var(--bg);
 }
 
-#beanbutton.on {
+#stopbutton.on {
   background-color: #000;
   border: #070707 0.1px solid;
   padding: 10px;
@@ -281,8 +273,21 @@ strong {
   border-radius: var(--radius);
 }
 
-.logo-clone {
+.logoDriftContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 9999;
+}
+
+.driftLogo {
+  position: absolute;
+  pointer-events: auto;
+  cursor: pointer;
   user-select: none;
-  z-index: 1000;
-  border-radius: 50%;
+  transition: left 1s ease, top 1s ease, transform 1s ease, width 1s ease;
 }
