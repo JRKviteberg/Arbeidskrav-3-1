@@ -1,4 +1,3 @@
-
 :root {
   --maintext: #000;
   --bg: #fffaef;
@@ -10,9 +9,9 @@
   --third-btn-hov: #26aa85;
   --focus-outline: 3px solid #144d2a;
   --transition: all 0.2s ease-in-out;
+  --radius: 0.75rem;
+  --border: #e5e7eb;
 }
-
-
 
 * {
   box-sizing: border-box;
@@ -22,14 +21,72 @@ body {
   background-color: var(--bg);
   color: var(--text-dark);
   margin: 0;
-  padding-bottom: 100px;
   line-height: 1.5;
 }
 
-section{
- 
-
+#mobile-menu[popover] {
+  position: fixed;
+  right: 0;
+  left: auto;
+  width: min(90vw, 20rem);
+  height: 100dvh;
+  overflow: auto;
+  background-color: var(--bg);
+  border: 3px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-left: auto;
+  font-family: "Karma", serif;
 }
+
+#mobile-menu header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border: 0;
+  background-color: transparent;
+  padding: 0 0 1rem;
+  color: var(--text);
+}
+
+#mobile-menu nav ul {
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+#mobile-menu nav a {
+  padding: 0.5rem;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--maintext);
+}
+
+#mobile-menu nav a:hover {
+  background-color: var(--maincolor-hov);
+  border-radius: var(--radius);
+}
+
+.menu-button {
+  margin-left: auto;
+  border: 2px solid var(--border);
+  background-color: transparent;
+  padding: 0.3rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.button-close {
+  border: 2px solid var(--border);
+  background: transparent;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+
 
 .order-item img {
   max-width: 100%;
@@ -43,11 +100,12 @@ h3 {
   line-height: 2;
 }
 
-#cart-title{
-  padding: 2.5rem;
+#cart-title {
+  padding: 2rem;
+  margin-top: 6rem;
 }
 
-/* Produktliste */
+
 .order-list {
   max-width: 600px;
   margin: 0 auto 3rem auto;
@@ -111,13 +169,13 @@ h3 {
   font-size: 1.1rem;
 }
 
-/* Total - Handlinger*/
+
 .summary {
   max-width: 600px;
   margin: 0 auto;
   font-size: 1.1rem;
   font-weight: 450;
-  
+
 }
 
 .total-section {
@@ -132,6 +190,7 @@ h3 {
   margin: 0;
   font-size: 1.1rem;
 }
+
 .total-section p {
   align-items: center;
   flex-direction: column;
@@ -161,16 +220,17 @@ h3 {
   flex-wrap: wrap;
 }
 
-#clear-btn{
+#clear-btn {
   color: white;
-  
+
 }
 
-#table-btn{
+#table-btn {
   color: white;
 }
 
-.plus, .minus{
+.plus,
+.minus {
   color: white;
 
 }
@@ -199,9 +259,6 @@ h3 {
 }
 
 
-
-
-/*Delete button*/
 .delete-btn {
   background-color: var(--maincolor);
   color: white;
@@ -222,7 +279,7 @@ h3 {
   transform: scale(1.05);
 }
 
-/* Kontaktskjema*/
+
 .contact-form {
   max-width: 600px;
   margin: 2rem auto;
@@ -285,7 +342,7 @@ textarea:focus {
   margin-top: 15px;
 }
 
-/* ======== RESPONSIV ======== */
+
 @media (max-width: 768px) {
   .order-item {
     flex-direction: column;
@@ -293,7 +350,7 @@ textarea:focus {
   }
 
 
-  .order-item img{
+  .order-item img {
     height: auto;
     width: 40%;
     margin-top: 10px;
@@ -309,9 +366,9 @@ textarea:focus {
     gap: 20px;
   }
 
-  .total-section p{
+  .total-section p {
     display: flex;
-    
+
   }
 
   #order-btn {
@@ -329,7 +386,7 @@ textarea:focus {
 
   }
 
-  .order-item{
+  .order-item {
     flex-direction: column;
     align-items: center;
     width: 95%;
