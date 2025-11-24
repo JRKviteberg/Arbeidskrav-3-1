@@ -1,36 +1,47 @@
-// selecting all products in the cart (all <article> elements) with class".order-item"
 const headingEl = document.getElementById("cart-title");
-const totalEl = document.getElementById("total-price"); //will use this to display the total price in the cart
-const bordEl = document.getElementById("table-number"); //grabs the HTML element where the table number will be displayed
-const bestillBtn = document.getElementById("order-btn"); //this select the button which users will click to complete their order
-const tømBtn = document.getElementById("clear-btn"); //reset the cart
-const bordBtn = document.getElementById("table-btn"); //after clicking this button it allows the user to enter a table number
-const orderlist = document.querySelector(".order-list"); //selecting the parent container of all products
-const produkter = document.querySelectorAll(".order-item"); // get initial list of products to set up event listeners
+const totalEl = document.getElementById("total-price");
+const bordEl = document.getElementById("table-number");
+const bestillBtn = document.getElementById("order-btn");
+const tømBtn = document.getElementById("clear-btn");
+const bordBtn = document.getElementById("table-btn");
+const orderlist = document.querySelector(".order-list");
+const produkter = document.querySelectorAll(".order-item");
 
-//function that updates the "mine ordre (x)" text
+//silje sin del - start
+const toggleBtn = document.getElementById("toggleBtn");
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    toggleBtn.textContent = "Lys modus";
+    toggleBtn.classList.remove("off");
+    toggleBtn.classList.add("on");
+    beanbutton.classList.remove("off");
+    beanbutton.classList.add("on");
+  } else {
+    toggleBtn.textContent = "Mørk modus";
+    toggleBtn.classList.remove("on");
+    toggleBtn.classList.add("off");
+    beanbutton.classList.remove("on");
+    beanbutton.classList.add("off");
+  }
+  console.log("Dark mode toggled");
+}); //silje sin del - slutt
+
 function updateOrderCount() {
   let totalItems = 0;
-
-  // get fresh updated list
   const currentProducts = document.querySelectorAll(".order-item");
 
-  // loop through FRESH list, not the old one
   for (let i = 0; i < currentProducts.length; i++) {
     const count = parseInt(
       currentProducts[i].querySelector(".count").textContent
     );
     totalItems += count;
   }
-
-  // update heading text
   headingEl.textContent = `Mine ordre (${totalItems})`;
 }
 
-//Loop through every order item
-//iterate -> do the same action to every items in a list (for similar collection of data)
 for (let i = 0; i < produkter.length; i++) {
-  //selecting Buttons and Count display within each item
   const item = produkter[i];
   const minusBtn = item.querySelector(".minus");
   const plusBtn = item.querySelector(".plus");
@@ -56,21 +67,17 @@ for (let i = 0; i < produkter.length; i++) {
   });
 
   deleteBtn.addEventListener("click", function () {
-    //remove the item from the page
     item.remove();
     updateTotalPrice();
     updateOrderCount();
   });
-} //closes the loop
-
+}
 function updateTotalPrice() {
   let total = 0;
   let totalItems = 0;
 
-  //get fresh list of products in case some were deleted)
   const currentProducts = document.querySelectorAll(".order-item");
 
-  //loop through current products on the page
   for (let i = 0; i < currentProducts.length; i++) {
     const count = parseInt(
       currentProducts[i].querySelector(".count").textContent
@@ -88,20 +95,39 @@ function updateTotalPrice() {
   }
 }
 
-
-
-                                                                                          
-//tøm handlekurv knapp
 tømBtn.addEventListener("click", () => {
   const currentProducts = document.querySelectorAll(".order-item");
-  currentProducts.forEach(p => p.remove());
+  currentProducts.forEach((p) => p.remove());
 
   updateTotalPrice();
   updateOrderCount();
 
-  alert("Handlekurven er tømt");
-
+  alert("Handlekurven er tømt!");
 });
+bordBtn.addEventListener("click", () => {
+  let bordnr = prompt("skriv inn bordnummer");
 
+  if (!bordnr) return;
+  bordnr = bordnr.trim();
 
+  if (isNaN(bordnr)) {
+    alert("ugyldig! kun tall er lov");
+    return;
+  }
 
+  if (bordnr.length > 2 || bordnr.length === 0) {
+    alert("Ugyldig! du må skrive kun 2 tall");
+    return;
+  }
+
+  bordEl.textContent = `Bord: ${bordnr}`;
+  alert(`Bordnummer er lagt til: ${bordnr}`);
+});
+bestillBtn.addEventListener("click", () => {
+  if (!bordEl.textContent || bordEl.textContent.trim() === "") {
+    alert("Du må først  velge et bord nummer før du kan fullføre bestillingen");
+    return;
+  }
+
+  alert("Takk:) bestilling er fullført");
+});
