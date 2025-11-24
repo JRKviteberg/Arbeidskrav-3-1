@@ -1,52 +1,77 @@
 <!DOCTYPE html>
 <html lang="nb">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Kaffens arv - en kafé som feirer kaffekultur og bærekraft"
-    />
-    <meta name="author" content="Gruppe 1" />
-    <title>Handlekurv - Kaffens Arv</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/handlekurv.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Karma:wght@300;
-400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!--herro-->
-  </head>
-  <body>
-    <header class="headerMain">
-      <div class="header-container">
-        <div class="logoImg">
-          <img src="./assets/images/logokaffensarv.png" alt="bilde av logo" />
-        </div>
-        <div class="headerButtons">
-          <ul>
-            <li><a href="./index.html">Forside</a></li>
-            <li><a href="./Meny.html">Meny</a></li>
-            <li><a href="./BestillingsSide.html"> Handlekurv</a></li>
-          </ul>
-        </div>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kaffens arv - en kafé som feirer kaffekultur og bærekraft" />
+  <meta name="author" content="Gruppe 1" />
+  <title>Handlekurv - Kaffens Arv</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/handlekurv.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Karma:wght@300;
+400;500;600;700&display=swap" rel="stylesheet" />
+  <!--herro-->
+</head>
+
+<body>
+  <header class="headerMain">
+    <div class="logoImg">
+      <img id="kaffelogo" src="./assets/images/logokaffensarv.png" alt="bilde av logo" height="120px" width="120px" />
+    </div>
+    <nav class="headerButtons">
+      <ul>
+        <li aria-current="page"><a href="./index.html">Forside</a></li>
+        <li><a href="./Meny.html">Meny</a></li>
+        <li><a href="./BestillingsSide.html">Handlekurv</a></li>
+      </ul>
+    </nav>
+
+
+
+    <button class="menu-button" popovertarget="mobile-menu" aria-label="Åpne meny">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+        <g fill="#ffffff">
+          <g transform="scale(5.12,5.12)">
+            <path d="M5,8c-0.72127,-0.0102 -1.39216,..."></path>
+          </g>
+        </g>
+      </svg>
+    </button>
+
+
+  </header>
+
+  <nav id="mobile-menu" popover aria-label="mobilmeny">
+    <header>
+      <strong>Meny</strong>
+      <button class="button-close" popovertarget="mobile-menu" popovertargetaction="hide" aria-label="Lukk meny">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
+          <path d="M 7.71875 6.28125 ... Z"></path>
+        </svg>
+      </button>
     </header>
 
-    <main>
-      <section aria-label="Bestillingsoversikt" class="order-list">
+    <nav aria-label="mobillenker">
+      <ul>
+        <li><a href="./index.html">Forside</a></li>
+        <li><a href="./Meny.html">Meny</a></li>
+        <li><a href="./BestillingsSide.html">Handlekurv</a></li>
+      </ul>
+    </nav>
+  </nav>
 
-        <h2 id="cart-title">Mine ordre (3)</h2>
 
-    
-        <article class="order-item" item-price="70">
-          <img
-            src="./assets/images/islatte-karamell.png"
-            alt="Islatte Karamell, kald drikke med karamell"
-          />
+  <main>
+    <section aria-label="Bestillingsoversikt" class="order-list">
+
+      <h2 id="cart-title">Mine ordre (3)</h2>
+
+
+      <article class="order-item" item-price="70">
+        <img src="./assets/images/islatte-karamell.png" alt="Islatte Karamell, kald drikke med karamell" />
 
         <div class="order-info">
           <h2 class="icelatte">Islatte Karamell</h2>
@@ -77,7 +102,7 @@
         </div>
 
         <p class="price" aria-label="Pris per stk 129 kroner">129kr</p>
-         <button class="delete-btn" aria-label="Fjern Creamy Avocado Bagel fra bestillingen">Fjern🗑️</button>
+        <button class="delete-btn" aria-label="Fjern Creamy Avocado Bagel fra bestillingen">Fjern🗑️</button>
       </article>
 
 
@@ -95,76 +120,81 @@
         </div>
 
         <p class="price" aria-label="Pris per stk 55 kroner">55kr</p>
-         <button class="delete-btn" aria-label="Fjern pumpkin bolle fra bestillingen">Fjern🗑️</button>
+        <button class="delete-btn" aria-label="Fjern pumpkin bolle fra bestillingen">Fjern🗑️</button>
       </article>
 
-       <section aria-label="Bestillingssummering" class="summary">
+
+
+
+      <section aria-label="Bestillingssummering" class="summary">
         <div class="total-section">
           <button id="order-btn" arial-label="Fullfør bestilling">Fullfør bestilling</button>
           <div class="Total">
             <h3>Total pris:</h3>
             <p id="total-price" aria-live="polite">254kr</p>
-            </div> 
           </div>
+        </div>
 
-          <div class="extra-buttons" role="group" aria-label="Ekstra handlingsknapper">
-            <button id="clear-btn" aria-label="Tøm handlekurv">Tøm handlekurv</button>
-            <button id="table-btn" aria-label="Legg til bordnummer">Legg til bordnummer</button>
+        <div class="extra-buttons" role="group" aria-label="Ekstra handlingsknapper">
+          <button id="clear-btn" aria-label="Tøm handlekurv">Tøm handlekurv</button>
+          <button id="table-btn" aria-label="Legg til bordnummer">Legg til bordnummer</button>
 
-              <p id="table-number" aria-live="polite"></p>
-    </section>
-           
+          <p id="table-number" aria-live="polite"></p>
+      </section>
+
       <section aria-label="Kontakt og forespørselsskjema" class="contact-form">
-      <p>
-        Ønsker du å bestille en større ordre eller catering?  
-        <br />
-        Bruk skjemaet under for å sende oss en forespørsel.
-      </p>
+        <p>
+          Ønsker du å bestille en større ordre eller catering?
+          <br />
+          Bruk skjemaet under for å sende oss en forespørsel.
+        </p>
 
-      <form aria-labelledby="form-title">
-        <h2 id="form-title">Forespørselsskjema</h2>
+        <form aria-labelledby="form-title">
+          <h2 id="form-title">Forespørselsskjema</h2>
 
-        <label for="fullname">Fullt navn</label>
-        <input type="text" id="fullname" name="fullname" required aria-required="true" />
+          <label for="fullname">Fullt navn</label>
+          <input type="text" id="fullname" name="fullname" required aria-required="true" />
 
-        <label for="email">E-post</label>
-        <input type="email" id="email" name="email" required aria-required="true" />
+          <label for="email">E-post</label>
+          <input type="email" id="email" name="email" required aria-required="true" />
 
-        <label for="subject">Emne</label>
-        <input type="text" id="subject" name="subject" />
+          <label for="subject">Emne</label>
+          <input type="text" id="subject" name="subject" />
 
-        <label for="message">Beskrivelse av hva du ønsker</label>
-        <textarea id="message" name="message" rows="4"></textarea>
+          <label for="message">Beskrivelse av hva du ønsker</label>
+          <textarea id="message" name="message" rows="4"></textarea>
 
-        <button type="submit" id="send-btn" aria-label="Send forespørsel">Send forespørsel</button>
-      </form>
+          <button type="submit" id="send-btn" aria-label="Send forespørsel">Send forespørsel</button>
+        </form>
 
-      <p id="confirmation" aria-live="polite"></p>
-    </section>
+        <p id="confirmation" aria-live="polite"></p>
+      </section>
   </main>
 
-    <footer>
-      <p class="left">
-        Kontakt oss<br />
-        Storgata 12<br />
-        0161 Oslo<br />
-        Tlf: 22334455
-      </p>
 
-      <p class="center">© 2025 Kaffens arv</p>
+  <footer>
+    <p class="left">
+      Kontakt oss<br />
+      Storgata 12<br />
+      0161 Oslo<br />
+      Tlf: 22334455
+    </p>
 
-      <nav class="right" aria-label="Linker til sosiale medier">
-        <a href="https://www.facebook.com" target="_blank">
-          <img src="assets/icons/facebook.png" alt="Facebook" class="icon" />
-        </a>
-        <a href="https://www.instagram.com" target="_blank">
-          <img src="assets/icons/instagram.png" alt="Instagram" class="icon" />
-        </a>
-        <a href="mailto:post@kaffensarv.no">
-          <img src="assets/icons/mail.png" alt="E-post" class="icon" />
-        </a>
-      </nav>
-    </footer>
-    <script src="JS/handlekurv.js"></script>
-  </body>
+    <p class="center">© 2025 Kaffens arv</p>
+
+    <nav class="right" aria-label="Linker til sosiale medier">
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="assets/icons/facebook.png" alt="Facebook" class="icon" />
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="assets/icons/instagram.png" alt="Instagram" class="icon" />
+      </a>
+      <a href="mailto:post@kaffensarv.no">
+        <img src="assets/icons/mail.png" alt="E-post" class="icon" />
+      </a>
+    </nav>
+  </footer>
+  <script src="JS/handlekurv.js"></script>
+</body>
+
 </html>
