@@ -1,15 +1,3 @@
-#stopbutton {
-  background-color: var(--bg);
-  border: #fffefb 0.1px solid;
-  padding: 10px;
-  color: var(--bg);
-}
-
-.mainpic {
-  text-align: center;
-  margin: 30px;
-}
-
 .heroImage {
   display: flex;
   justify-content: center;
@@ -20,6 +8,19 @@
 .heroImage img {
   max-width: 100%;
   height: auto;
+}
+
+#stopbutton {
+  background-color: var(--bg);
+  border: #fffefb 0.1px solid;
+  padding: 10px;
+  color: var(--bg);
+}
+
+h1,
+.maintxt {
+  text-align: center;
+  margin: 30px;
 }
 
 .monthlyspecial {
@@ -100,16 +101,6 @@
 
 .bundle-card button:hover {
   background-color: var(--scnbtn-hov);
-}
-
-.button-popover {
-  background-color: var(--third-btn);
-  color: var(--bg);
-  font-size: 12px;
-  padding: 5px;
-  border: var(--border);
-  border-radius: var(--radius);
-  cursor: pointer;
 }
 
 #coffeeimg {
@@ -223,6 +214,16 @@
 
 strong {
   font-size: 30px;
+}
+
+.button-popover {
+  background-color: var(--third-btn);
+  color: var(--bg);
+  font-size: 12px;
+  padding: 5px;
+  border: var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
 }
 
 #mobile-menu header {

@@ -8,6 +8,9 @@
   .heroImage {
     max-width: 100%;
   }
+  .menu-button {
+    display: none;
+  }
 
   .monthlyspecial {
     display: flex;
@@ -64,9 +67,6 @@
 
   footer nav.right {
     justify-content: center;
-  }
-  .menu-button {
-    display: none;
   }
 
   .nav-inline {
