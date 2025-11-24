@@ -7,40 +7,36 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.textContent = "Lys modus";
     toggleBtn.classList.remove("off");
     toggleBtn.classList.add("on");
+    beanbutton.classList.remove("off");
+    beanbutton.classList.add("on");
   } else {
     toggleBtn.textContent = "Mørk modus";
     toggleBtn.classList.remove("on");
     toggleBtn.classList.add("off");
+    beanbutton.classList.remove("on");
+    beanbutton.classList.add("off");
   }
 
   console.log("Dark mode toggled");
 });
 
-const logobutton = document.getElementById("beanbutton");
-
-logobutton.addEventListener("click", growSprout);
-
-function growSprout() {
-  alert("The logo was clicked!");
-}
-
 const monthlybundle = [
-  {
-    name: "Chai latte",
-    description:
-      "En varm og krydret drikk laget med sort te, melk og en blanding av krydder som kanel, kardemomme og ingefær.",
-    image: "assets/images/bunbundle.png",
-  },
   {
     name: "Pumpkin spice islatte",
     description:
-      "En forfriskende kald drikk som kombinerer espresso, isbiter, melk og vår signatur gresskarkrydderblanding, toppet med pisket krem og et dryss av kanel.",
-    image: "assets/images/pumpinicedbunble.png",
+      "En deilig islatte med smak av gresskar og varme krydder, perfekt for de varme høstdagene.",
+    image: "assets/images/bunbundle.png",
   },
   {
     name: "Pumpkin spice latte",
     description:
-      "En kremet og smakfull høstfavoritt laget med espresso, steamet melk og vår signatur gresskarkrydderblanding, toppet med pisket krem og et dryss av kanel.",
+      "En sesongbasert favoritt som kombinerer espresso, steamet melk og gresskarpuré, toppet med krem og kanel.",
+    image: "assets/images/pumpinicedbunble.png",
+  },
+  {
+    name: "Pumpkin Bolle",
+    description:
+      "En myk og saftig bolle fylt med gresskarpuré og krydret med varme krydder som kanel og muskat, perfekt for høstsesongen.",
     image: "assets/images/pumpinspicelattebundle.png",
   },
 ];
@@ -63,6 +59,6 @@ for (let i = 0; i < monthlybundle.length; i++) {
   container.appendChild(card);
 }
 
-function openOrder(name) {
+function openOrder() {
   alert("Bestillingen er lagt til i handlekurven!");
 }
