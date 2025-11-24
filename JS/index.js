@@ -62,28 +62,3 @@ for (let i = 0; i < monthlybundle.length; i++) {
 function openOrder() {
   alert("Bestillingen er lagt til i handlekurven!");
 }
-/*
-const funFact = [
-  {
-    fact: "Kaffebønner er egentlig steiner i kaffebær, som er en frukt fra kaffebusken.",
-  },
-  {
-    fact: "Det første webkameraet ble oppfunnet ved Cambridge-universitetet i 1991 for å overvåke en kaffetrakter.",
-  },
-  {
-    fact: "Finland er landet med høyest kaffeforbruk per innbygger.",
-  },
-  {
-    fact: "Mørkere kaffebønner har faktisk mindre koffein enn lettere brente bønner.",
-  },
-  {
-    fact:"Den eldste kaffetradisjonen er funnet i Jemen, hvor kaffehusene oppsto for minst 700 år siden."
-  }
-;
-]
-
-function popUpFact(popupFact) {
-  const popup = document.createElement("div");
-  popup.classList.add("fact-popup");
-  
-}*/
