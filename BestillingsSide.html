@@ -21,29 +21,21 @@
     <!--herro-->
   </head>
   <body>
-  <header class="headerMain">
-      <div class="logoImg">
-        <img
-          id="kaffelogo"
-          src="./assets/images/logokaffensarv.png"
-          alt="bilde av logo"
-          height="120px"
-          width="120px"
-        />
+    <header class="headerMain">
+      <div class="header-container">
+        <div class="logoImg">
+          <img src="./assets/images/logokaffensarv.png" alt="bilde av logo" />
+        </div>
+        <div class="headerButtons">
+          <ul>
+            <li><a href="./index.html">Forside</a></li>
+            <li><a href="./Meny.html">Meny</a></li>
+            <li><a href="#">Om oss</a></li>
+            <li><a href="#">Bærekraft</a></li>
+            <li><a href="./BestillingsSide.html"> Handlekurv</a></li>
+          </ul>
+        </div>
       </div>
-      <nav class="headerButtons">
-        <ul>
-          <li aria-current="page"><a href="./index.html">Forside</a></li>
-          <li><a href="./Meny.html">Meny</a></li>
-          <!--<li><a href="#">Om oss</a></li>
-          <li><a href="#">Bærekraft</a></li>-->
-          <li><a href="./BestillingsSide.html">Handlekurv</a></li>
-        </ul>
-      </nav>
-
-      <button id="toggleBtn" class="off">Mørk modus</button>
-      <!--<button id="beanbutton" class="off">Funfacts</button> -->
-
     </header>
 
     <main>
@@ -108,9 +100,6 @@
          <button class="delete-btn" aria-label="Fjern pumpkin bolle fra bestillingen">Fjern🗑️</button>
       </article>
 
-
-
-    
        <section aria-label="Bestillingssummering" class="summary">
         <div class="total-section">
           <button id="order-btn" arial-label="Fullfør bestilling">Fullfør bestilling</button>
@@ -155,8 +144,6 @@
       <p id="confirmation" aria-live="polite"></p>
     </section>
   </main>
-
-
 
     <footer>
       <p>&copy; 2025 Kafé Bestilling. Alle rettigheter reservert.</p>

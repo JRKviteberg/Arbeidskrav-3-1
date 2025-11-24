@@ -5,6 +5,14 @@
   color: var(--bg);
 }
 
+.logo-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
 .mainpic {
   text-align: center;
   margin: 30px;
@@ -28,7 +36,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 30px;
+  padding: 10px;
 }
 
 .monthlytext {
@@ -51,7 +59,7 @@
   flex-direction: row;
   gap: 100px;
   justify-content: space-evenly;
-  padding: 100px;
+  padding: 50px;
 }
 
 .bundle-card {
@@ -202,6 +210,10 @@
   color: #e6e6e6;
 }
 
+.dark-mode .bundle-card {
+  background-color: #000;
+}
+
 #mobile-menu[popover] {
   position: fixed;
   right: 0;
@@ -267,4 +279,10 @@ strong {
   background-color: var(--maincolor-hov);
 
   border-radius: var(--radius);
+}
+
+.logo-clone {
+  user-select: none;
+  z-index: 1000;
+  border-radius: 50%;
 }
