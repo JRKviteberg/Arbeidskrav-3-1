@@ -1,0 +1,104 @@
+.scrollToIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.5rem;
+    padding-top: 90px;
+}
+
+.scrollToIcons img {
+    height: 34px;
+    width: 36px;
+}
+
+.scrollToIcons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Karma", serif;
+    color: black;
+    border-radius: 12px;
+    padding: 4px;
+}
+
+.scrollToIcons a:hover {
+     background-color: #bd8b8b95;
+     transform: scale(1.05);
+}
+
+/* Produkter */
+
+.products {
+    display: grid;
+    justify-content: center;
+    padding-top: 34px;
+    padding-left: 24px;
+}
+
+.varmeDrikker,
+.kaldeDrikker,
+.sandwicher,
+.desserter {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem 0;
+}
+
+
+
+@media (max-width: 1200px) {
+  .varmeDrikker,
+  .kaldeDrikker,
+  .sandwicher,
+  .desserter {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .varmeDrikker,
+  .kaldeDrikker,
+  .sandwicher,
+  .desserter {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:586px) {
+  .varmeDrikker,
+  .kaldeDrikker,
+  .sandwicher,
+  .desserter {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.products img {
+    height: 184px;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    width: 224px;
+}
+ .product p {
+    text-align: center;
+ }
+
+.products button {
+    background-color: #580404;
+    color: white;
+    border-radius: 12px;
+    padding: 8px 24px;
+    border: none;
+}
+
+/**/
