@@ -7,6 +7,8 @@
   --scnbtn-hov: #e5b999;
   --third-btn: #00694b;
   --third-btn-hov: #26aa85;
+  --focus-outline: 3px solid #144d2a;
+  --transition: all 0.2s ease-in-out;
   --radius: 0.75rem;
   --border: #e5e7eb;
 }
@@ -19,6 +21,9 @@
 
 body {
   background-color: var(--bg);
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.5;
 }
 
 header .nav {
@@ -31,18 +36,21 @@ h1 {
   color: var(--maintext);
   font-size: 45px;
   font-family: "Karma", serif;
+  line-height: 2;
 }
 
 h2 {
   color: var(--maintext);
   font-size: 30px;
   font-family: "Karma", serif;
+  line-height: 2;
 }
 
 h3 {
   color: var(--maintext);
   font-size: 28px;
   font-family: "Karma", serif;
+  line-height: 2;
 }
 
 p {

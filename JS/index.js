@@ -128,3 +128,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   stopBtn.addEventListener("click", stoppLogoer);
 });
+
+/*
+document.addEventListener("keydown", (e) ) => {
+        if (e.key === "Esc" || e.key === " ") {
+          e.preventDefault();
+          askAndReveal();
+        } }*/
