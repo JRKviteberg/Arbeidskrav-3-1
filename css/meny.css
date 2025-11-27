@@ -17,13 +17,13 @@
     align-items: center;
     text-decoration: none;
     font-family: "Karma", serif;
-    color: black;
+    color: var(--maintext);
     border-radius: 12px;
     padding: 4px;
 }
 
 .scrollToIcons a:hover {
-     background-color: #bd8b8b95;
+     background-color: var(--maincolor-hov);
      transform: scale(1.05);
 }
 
@@ -94,11 +94,20 @@
  }
 
 .products button {
-    background-color: #580404;
+    background-color: var(--maincolor);
     color: white;
     border-radius: 12px;
     padding: 8px 24px;
     border: none;
 }
 
-/**/
+.heart {
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s ease;
+}
+
+.heart:hover {
+    transform: scale(1.2);
+}
