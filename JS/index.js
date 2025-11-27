@@ -48,6 +48,7 @@ for (let i = 0; i < monthlybundle.length; i++) {
 
   const card = document.createElement("div");
   card.classList.add("bundle-card");
+  card.setAttribute("aria-label", `kort over ${items.name}`);
 
   card.innerHTML = `
     <img src="${items.image}" alt="Bilde av ${items.name}" class="bundle-photo">
@@ -127,11 +128,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const stopBtn = document.getElementById("stopbutton");
 
   stopBtn.addEventListener("click", stoppLogoer);
-});
 
-/*
-document.addEventListener("keydown", (e) ) => {
-        if (e.key === "Esc" || e.key === " ") {
-          e.preventDefault();
-          askAndReveal();
-        } }*/
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      e.preventDefault();
+      stoppLogoer();
+    }
+  });
+});
